@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FaCalendarAlt, FaMapMarkerAlt, FaUniversity, FaEnvelope } from 'react-icons/fa';
 
 interface Speaker {
   id: number;
@@ -153,9 +154,20 @@ export default function Home() {
                 Shaping the Future of Human Resources
               </p>
               
-              <p className="text-lg mb-12" style={{ color: '#D9CBC2', opacity: 0.8 }}>
-                15-16 November 2025 • Christ Deemed to be University • Pune Lavasa Campus
-              </p>
+              <div className="text-lg mb-12 space-y-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
+                <div className="flex items-center justify-center space-x-3">
+                  <FaCalendarAlt className="text-xl flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="text-center">15-16 November 2025</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <FaUniversity className="text-xl flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="text-center">Christ (Deemed to be University)</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <FaMapMarkerAlt className="text-xl flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="text-center">Pune Lavasa Campus, Maharashtra</span>
+                </div>
+              </div>
 
               {/* CTA Button */}
               <div className="flex justify-center">
@@ -293,17 +305,26 @@ export default function Home() {
               <h4 className="text-lg font-semibold mb-4" style={{ color: '#F5F0EA' }}>
                 Contact Info
               </h4>
-              <div className="space-y-2">
-                <p className="text-sm" style={{ color: '#D9CBC2' }}>
-                  📍 Christ Deemed to be University,<br />
-                  Pune Lavasa Campus
-                </p>
-                <p className="text-sm" style={{ color: '#D9CBC2' }}>
-                  📅 15-16 November 2025
-                </p>
-                <p className="text-sm" style={{ color: '#D9CBC2' }}>
-                  📧 info@hrvista.com
-                </p>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-2">
+                  <FaMapMarkerAlt className="text-sm mt-0.5 flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <div className="text-sm" style={{ color: '#D9CBC2' }}>
+                    Christ Deemed to be University,<br />
+                    Pune Lavasa Campus
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <FaCalendarAlt className="text-sm flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="text-sm" style={{ color: '#D9CBC2' }}>
+                    15-16 November 2025
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <FaEnvelope className="text-sm flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="text-sm" style={{ color: '#D9CBC2' }}>
+                    info@hrvista.com
+                  </span>
+                </div>
               </div>
             </div>
           </div>
