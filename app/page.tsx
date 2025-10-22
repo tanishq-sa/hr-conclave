@@ -277,11 +277,9 @@ export default function Home() {
               <p className="text-sm mb-4 md:mb-0" style={{ color: '#D9CBC2' }}>
                 © 2025 HR Vista 2.0. All rights reserved.
               </p>
-              <div className="flex space-x-6">
-                <a href="#" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Privacy Policy</a>
-                <a href="#" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Terms of Service</a>
-                <a href="#" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Cookie Policy</a>
-              </div>
+              <p className="text-sm" style={{ color: '#D9CBC2' }}>
+                Developed by Tanishq Saini
+              </p>
             </div>
           </div>
         </div>
