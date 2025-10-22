@@ -47,6 +47,8 @@ const speakers: Speaker[] = [
 ];
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #112250 0%, #3B507D 100%)' }}>
       {/* Navbar */}
@@ -83,7 +85,11 @@ export default function Home() {
               </div>
             </div>
             <div className="md:hidden">
-              <button className="p-2 rounded-lg" style={{ backgroundColor: '#E0C58E20' }}>
+              <button 
+                className="p-2 rounded-lg" 
+                style={{ backgroundColor: '#E0C58E20' }}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
                 <svg className="w-6 h-6" style={{ color: '#F5F0EA' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -91,6 +97,37 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 z-30" style={{ backgroundColor: '#112250' }}>
+            <div className="px-4 py-6 space-y-4 border-t" style={{ borderColor: '#3B507D' }}>
+              <a 
+                href="#speakers" 
+                className="block text-sm font-medium transition-colors duration-300 hover:opacity-80" 
+                style={{ color: '#D9CBC2' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Speakers
+              </a>
+              <a 
+                href="#contact" 
+                className="block text-sm font-medium transition-colors duration-300 hover:opacity-80" 
+                style={{ color: '#D9CBC2' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <button 
+                className="px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105" 
+                style={{ backgroundColor: '#E0C58E', color: '#112250' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Download Brochure
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -122,7 +159,7 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className="flex justify-center">
-                <button className="px-8 py-4 border-2 font-semibold rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105" style={{ borderColor: '#E0C58E', color: '#F5F0EA' }}>
+                <button onClick={() => window.open('https://www.google.com', '_blank')} className="px-8 py-4 border-2 font-semibold rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105" style={{ borderColor: '#E0C58E', color: '#F5F0EA' }}>
                   Download Brochure
                 </button>
               </div>
