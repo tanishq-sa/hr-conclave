@@ -74,9 +74,6 @@ export default function Home() {
                 <a href="#speakers" className="text-sm font-medium transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>
                   Speakers
                 </a>
-                <a href="#stats" className="text-sm font-medium transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>
-                  About
-                </a>
                 <a href="#contact" className="text-sm font-medium transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>
                   Contact
                 </a>
@@ -294,7 +291,6 @@ export default function Home() {
               </h4>
               <ul className="space-y-2">
                 <li><a href="#speakers" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Speakers</a></li>
-                <li><a href="#stats" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>About Event</a></li>
                 <li><a href="#contact" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Contact Us</a></li>
                 <li><a href="#" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Download Brochure</a></li>
               </ul>
