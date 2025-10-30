@@ -504,45 +504,102 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E0C58E' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E0C58E' fill-opacity='0.2'%3E%3Cpath d='M11 11h2v2h-2zM15 15h2v2h-2zM19 19h2v2h-2zM23 23h2v2h-2zM27 27h2v2h-2zM31 31h2v2h-2zM35 35h2v2h-2zM39 39h2v2h-2zM43 43h2v2h-2zM47 47h2v2h-2zM51 51h2v2h-2zM55 55h2v2h-2zM59 59h2v2h-2zM63 63h2v2h-2zM67 67h2v2h-2zM71 71h2v2h-2zM75 75h2v2h-2zM79 79h2v2h-2zM83 83h2v2h-2zM87 87h2v2h-2zM91 91h2v2h-2zM95 95h2v2h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '100px 100px'
         }}></div>
         
         {/* Header */}
         <header className="relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
+          <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-24 md:py-8">
+            <div className="text-center space-y-8">
+              <div className="inline-block px-4 py-2 rounded-full mb-6" style={{ backgroundColor: 'rgba(224, 197, 142, 0.1)' }}>
+                <span className="text-sm md:text-base font-medium tracking-wider uppercase" style={{ color: '#E0C58E', letterSpacing: '0.1em' }}>Annual HR Conclave</span>
+              </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: '#F5F0EA' }}>
-                HR Vista
-                <span className="block" style={{ color: '#E0C58E' }}>
-                  2.0
-                </span>
-          </h1>
+              <div className="space-y-2">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-none tracking-tight" style={{ 
+                  color: '#F5F0EA',
+                  textShadow: '0 2px 10px rgba(0, 0, 0, 0.2)'
+                }}>
+                  <span className="block">HR Vista</span>
+                  <span className="block text-transparent bg-clip-text" style={{
+                    backgroundImage: 'linear-gradient(90deg, #E0C58E 0%, #F5F0EA 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    lineHeight: '1.1'
+                  }}>2.0</span>
+                </h1>
+                
+                <div className="w-24 h-1.5 mx-auto my-6 rounded-full" style={{ backgroundColor: '#E0C58E' }}></div>
+                
+                <p className="text-xl md:text-2xl lg:text-3xl font-medium leading-tight max-w-3xl mx-auto" style={{ 
+                  color: '#E0C58E',
+                  lineHeight: '1.3',
+                  textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)'
+                }}>
+                  Human Future — Redefining Leadership in the Post-AI World
+                </p>
+              </div>
               
-              <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto leading-relaxed" style={{ color: '#D9CBC2' }}>
-                Shaping the Future of Human Resources
-              </p>
-              
-              <div className="text-lg mb-12 space-y-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
-                <div className="flex items-center justify-center space-x-3">
-                  <FaCalendarAlt className="text-xl flex-shrink-0" style={{ color: '#E0C58E' }} />
-                  <span className="text-center">15-16 November 2025</span>
+              <div className="max-w-3xl mx-auto pt-6">
+                <div className="relative p-8 rounded-2xl bg-opacity-20 backdrop-blur-sm" style={{ 
+                  backgroundColor: 'rgba(15, 23, 42, 0.6)',
+                  border: '1px solid rgba(224, 197, 142, 0.2)'
+                }}>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="w-8 h-1.5 rounded-full" style={{ backgroundColor: '#E0C58E' }}></div>
+                  </div>
+                  <p className="text-base md:text-lg leading-relaxed" style={{ 
+                    color: '#D9CBC2',
+                    lineHeight: '1.8',
+                    fontWeight: 300
+                  }}>
+                    As artificial intelligence reshapes industries and decision-making, leadership must evolve beyond traditional hierarchies and control. The future belongs to leaders who blend emotional intelligence with technological literacy—those who understand machines yet remain deeply human.
+                  </p>
                 </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <FaUniversity className="text-xl flex-shrink-0" style={{ color: '#E0C58E' }} />
-                  <span className="text-center">Christ (Deemed to be University)</span>
+              </div>
+              
+              <div className="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row justify-center gap-6 pt-8">
+                <div className="flex items-center justify-center space-x-3 px-6 py-3 rounded-full" style={{ 
+                  backgroundColor: 'rgba(224, 197, 142, 0.1)',
+                  border: '1px solid rgba(224, 197, 142, 0.2)'
+                }}>
+                  <FaCalendarAlt className="flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="font-medium">15-16 November 2025</span>
                 </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <FaMapMarkerAlt className="text-xl flex-shrink-0" style={{ color: '#E0C58E' }} />
-                  <span className="text-center">Pune Lavasa Campus, Maharashtra</span>
+                <div className="flex items-center justify-center space-x-3 px-6 py-3 rounded-full" style={{ 
+                  backgroundColor: 'rgba(224, 197, 142, 0.1)',
+                  border: '1px solid rgba(224, 197, 142, 0.2)'
+                }}>
+                  <FaUniversity className="flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="font-medium">Christ (Deemed to be University)</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3 px-6 py-3 rounded-full" style={{ 
+                  backgroundColor: 'rgba(224, 197, 142, 0.1)',
+                  border: '1px solid rgba(224, 197, 142, 0.2)'
+                }}>
+                  <FaMapMarkerAlt className="flex-shrink-0" style={{ color: '#E0C58E' }} />
+                  <span className="font-medium">Pune Lavasa Campus</span>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="flex justify-center">
-                <button onClick={() => window.open('/HRPoster.pdf', '_blank')} className="px-8 py-4 border-2 font-semibold rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105" style={{ borderColor: '#E0C58E', color: '#F5F0EA' }}>
-                  Download Brochure
+              <div className="flex justify-center pt-8">
+                <button 
+                  onClick={() => window.open('/HRPoster.pdf', '_blank')} 
+                  className="px-8 py-3 border-2 font-semibold rounded-full transition-all duration-300 hover:scale-105 flex items-center space-x-2" 
+                  style={{ 
+                    borderColor: '#E0C58E', 
+                    color: '#F5F0EA',
+                    backgroundColor: 'rgba(224, 197, 142, 0.1)',
+                    backdropFilter: 'blur(8px)'
+                  }}
+                >
+                  <span>Download Brochure</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
                 </button>
               </div>
             </div>
