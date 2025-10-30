@@ -63,7 +63,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 style={{ backgroundColor: '#E0C58E', color: '#112250' }}
                 onClick={() => window.open('/HRPoster.pdf', '_blank')}
               >
-                Download Brochure
+                View Brochure
               </button>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 style={{ backgroundColor: '#E0C58E', color: '#112250' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Download Brochure
+                View Brochure
               </button>
             </div>
           </div>
