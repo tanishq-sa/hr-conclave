@@ -59,7 +59,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><a href="#speakers" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Speakers</a></li>
               <li><a href="contact" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Contact Us</a></li>
-              <li><a href="#" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Download Brochure</a></li>
+              <li><a href="HRPoster.pdf" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Download Brochure</a></li>
             </ul>
           </div>
 

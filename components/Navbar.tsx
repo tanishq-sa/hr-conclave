@@ -61,6 +61,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
               <button 
                 className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105" 
                 style={{ backgroundColor: '#E0C58E', color: '#112250' }}
+                onClick={() => window.open('/HRPoster.pdf', '_blank')}
               >
                 Download Brochure
               </button>

@@ -353,7 +353,7 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className="flex justify-center">
-                <button onClick={() => window.open('https://www.google.com', '_blank')} className="px-8 py-4 border-2 font-semibold rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105" style={{ borderColor: '#E0C58E', color: '#F5F0EA' }}>
+                <button onClick={() => window.open('/HRPoster.pdf', '_blank')} className="px-8 py-4 border-2 font-semibold rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-105" style={{ borderColor: '#E0C58E', color: '#F5F0EA' }}>
                   Download Brochure
                 </button>
               </div>
