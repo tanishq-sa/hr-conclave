@@ -60,9 +60,6 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4" style={{ color: '#F5F0EA' }}>
-              Contact Info
-            </h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
                 <FaMapMarkerAlt className="text-sm mt-0.5 flex-shrink-0" style={{ color: '#E0C58E' }} />
