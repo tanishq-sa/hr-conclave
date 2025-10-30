@@ -71,7 +71,7 @@ export default function Footer() {
               <div className="flex items-center space-x-2">
                 <FaCalendarAlt className="text-sm flex-shrink-0" style={{ color: '#E0C58E' }} />
                 <span className="text-sm" style={{ color: '#D9CBC2' }}>
-                  15-16 November 2025
+                  15-16th November 2025
                 </span>
               </div>
               <div className="flex items-center space-x-2">
