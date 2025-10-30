@@ -48,19 +48,207 @@ interface RoundTableSession {
 const roundTableSessions: RoundTableSession[] = [
   {
     id: 1,
-    name: "John Doe",
-    title: "Round Table Session",
-    company: "TechCorp Global",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+    name: "Hitesh Kambli",
+    title: "Head – Human Resources",
+    company: "Secure Parking India",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I"
   },
   {
     id: 2,
-    name: "Jane Smith",
-    title: "VP of People Operations",
-    company: "InnovateLabs",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+    name: "Rajendra Lingwal",
+    title: "Senior Vice President – Human Resources",
+    company: "Persistent Systems",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFshcc7hhA1JQ/profile-displayphoto-scale_400_400/B4DZllpqm0IYAg-/0/1758347046222?e=1763596800&v=beta&t=EtWBClmczuHKUlwumfC16ivBSmnLw1qmc_tk72qXMvc"
   },
-  
+  {
+    id: 3,
+    name: "Karan Gandhi",
+    title: "AVP - HR",
+    company: "JSW",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQGaVN4ZxbrMZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516254125371?e=1763596800&v=beta&t=oPSKLeU4YUjpSSHL0OEEwSK1iqfhCo4SimTBnFk6CCo"
+  },
+  {
+    id: 4,
+    name: "Stanley Monteiro",
+    title: "Head – Talent Acquisition (Real Estate & Wholesale Finance)",
+    company: "Piramal Enterprises Limited",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQGWvJUOW8t-bQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723528106599?e=1763596800&v=beta&t=cBdYrH_kE6kKurjQwy4efygdwDkKrUgkzXwFdTRECAc"
+  },
+  {
+    id: 5,
+    name: "Parth Kulkarni",
+    title: "Vice President – Human Resources (Manufacturing)",
+    company: "Schindler India",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGv4IDbR-h4pw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694084412893?e=1763596800&v=beta&t=gOerP7DBiZlVLalZjrsky_m7JdYN90qWiFwF7Y_Bu_I"
+  },
+  {
+    id: 6,
+    name: "Neha Verma",
+    title: "AGM - HR",
+    company: "Aeries",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGdsNmkm1wHxQ/profile-displayphoto-scale_400_400/B4DZouUUz6IgAk-/0/1761713689440?e=1763596800&v=beta&t=9BNrulTov_g3El0Ne2SG_OKwXmaF9q0-y_287stJ5Jw"
+  },
+  {
+    id: 7,
+    name: "Pooja Amravanshi",
+    title: "Senior Manager – HR Business Partner",
+    company: "Company 3 Method India",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFsLT5QBHw6tw/profile-displayphoto-shrink_400_400/B4DZPVfNGvGoAk-/0/1734453548361?e=1763596800&v=beta&t=44YtnSW9e2FDuU1_VL9o-aataB4ZAe_VN5PYL6ckDvs"
+  },
+  {
+    id: 8,
+    name: "Anshuman Das",
+    title: "AVP HR Business Partner (Wholesale Finance)",
+    company: "Piramal Finance Limited",
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQEvI_lw-_dCPw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1620815306768?e=1763596800&v=beta&t=zgK8jUZMc_T5OWWDoWjI1rf72bbTD30FKLLb6PkOvqU"
+  },
+  {
+    id: 9,
+    name: "Sarabjeet Singh",
+    title: "Sr. Director",
+    company: "OpenGov Inc.",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQFosSPM9rO-6w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1589535137155?e=1763596800&v=beta&t=BpxCYPIKSXO2zlixtugdFbSbhSGQlMaOiMgOkiKm1Sc"
+  },
+  {
+    id: 10,
+    name: "Chirag Trivedi",
+    title: "Sr. General Manager - HR",
+    company: "VFS Global",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQG9FQ-Ho4Lzow/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686207312500?e=1763596800&v=beta&t=KWBO7wl7Fvbymq2T4a2zX6XZCtqWXoXNGKDKQNaHHgY"
+  },
+  {
+    id: 11,
+    name: "Gaurav Bhalla",
+    title: "Head- Global HR Shared Services",
+    company: "Sodexo",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHsWNUq92bMkw/profile-displayphoto-shrink_400_400/B56ZWygQMxGQAk-/0/1742456554873?e=1763596800&v=beta&t=si64iQMvtXhkgOwONJoaLr7_sOvJfi3e7WZFKVUywEI"
+  },
+  {
+    id: 12,
+    name: "Vignesh Seetharaman",
+    title: "Head HR",
+    company: "Mondelez India BU",
+    image: "https://media.licdn.com/dms/image/v2/C5103AQFA-MQ2pxi3kA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582638375024?e=1763596800&v=beta&t=WpBD_byy5s_S3ywlQuLGhCauBkoiuyoKriyAnL2gRk4"
+  },
+  {
+    id: 13,
+    name: "Anand Dhruv",
+    title: "Fractional Chief HR Officer",
+    company: "RackBank Datacenter",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGNV0uUrwTT1g/profile-displayphoto-shrink_400_400/B4DZdOfbgbGYAk-/0/1749368553330?e=1763596800&v=beta&t=stISJbmHviR7fjD-CotrFFnciVAgqmTf96LxD6ODHQ0"
+  },
+  {
+    id: 14,
+    name: "Dhwani Patel",
+    title: "Human Resources Manager",
+    company: "ExSyn Corp",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQF5rpUJpitW7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1668499596106?e=1763596800&v=beta&t=ETsKGTRJoPiqB9wOupv7K5H-7LC3r-W2lIePEV_xLUk"
+  },
+  {
+    id: 15,
+    name: "Rupali Mahadik",
+    title: "Global - Employee Experience Program Manager",
+    company: "QAD",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQH7_zHLq558Ug/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676920629639?e=1763596800&v=beta&t=ldvVpLTbiqTrQe0m3-ZSa6GgsPoeFtN6j6_5UNrRGf8"
+  },
+  {
+    id: 16,
+    name: "Prasheel Pardhe",
+    title: "Global Human Resources Director",
+    company: "Design Industries - Atlassian Partners",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHsXCrwnSf_mQ/profile-displayphoto-scale_400_400/B4DZnoSmF7GgAg-/0/1760538813739?e=1763596800&v=beta&t=TGelCYOy5k2AVrFPsIzoxX0L5NjskvVI6wmk6K6hnyU"
+  },
+  {
+    id: 17,
+    name: "Debansh Roy",
+    title: "Head of People | Board Member",
+    company: "AllianceBernstein",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHrtYW-z3hyIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718428470626?e=1763596800&v=beta&t=fGzu0QpjCe45zatmu2GzBxeHKElNm5faKVKQgyIeIBI"
+  },
+  {
+    id: 18,
+    name: "Bobby Kuriakose",
+    title: "Director - HR",
+    company: "Forbes Marshall",
+    image: "https://media.licdn.com/dms/image/v2/C5103AQFaezLkRDHNaw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1549336075218?e=1763596800&v=beta&t=yGcrOqCfy3_NzS9p8qheeT2ew0T0eU6ZZdJIGm_Zk0Q"
+  },
+  {
+    id: 19,
+    name: "Vaibhav Goel",
+    title: "Head - HR",
+    company: "Reliance Industries",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHu1g7Tm7NzOw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1613752969626?e=1763596800&v=beta&t=HY1i-sAqDyg5INyxWyj3Q_ic1gJo6RxMauL-ewPBqr0"
+  },
+  {
+    id: 20,
+    name: "Varada Gupta",
+    title: "Senior HR Manager",
+    company: "Entytle",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHuGMAeEKZ5jA/profile-displayphoto-scale_400_400/B56Zhur4fIHMAo-/0/1754203655932?e=1763596800&v=beta&t=DqUzmGgyO60YHdq-gS_PetN6ycJWYv8z846gWE_vqnQ"
+  },
+  {
+    id: 21,
+    name: "Rajalakshmi Ranganathan",
+    title: "AVP HR",
+    company: "Link Intime India",
+    image: "https://media.licdn.com/dms/image/v2/C5103AQHRjkN9z9ILXQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1526105574092?e=1763596800&v=beta&t=Z62hSwY5GbdIxkYD0l6Cbh8eYmdqKJTBKmeAPv6fDds"
+  },
+  {
+    id: 22,
+    name: "Pratixha Narkar",
+    title: "Vice President HR",
+    company: "Nomura",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFYQP4P1wbdPA/profile-displayphoto-shrink_400_400/B4DZObnxO6HcAg-/0/1733482716752?e=1763596800&v=beta&t=NwgRgy-9_BE5_z6d91CzbK4p_Z5jwzfNqT8Sspx4n-U"
+  },
+  {
+    id: 23,
+    name: "Ruby Baksi",
+    title: "Head - Talent Engagement and Development",
+    company: "Harbinger Group",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+  },
+  {
+    id: 24,
+    name: "Rohit Kalamkar",
+    title: "Director - HR",
+    company: "SA Technologies",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEton91JIg5kA/profile-displayphoto-shrink_400_400/B4DZOGSlsRHoAg-/0/1733124841682?e=1763596800&v=beta&t=FTcBjlopeI_tGLtTZUPOTCbSrhVLbzhFEFJSMnskcvo"
+  },
+  {
+    id: 25,
+    name: "Madhuri Chhatbar",
+    title: "People & Capability Manager - India",
+    company: "adm Indicia",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFx-ta1osxLlg/profile-displayphoto-scale_400_400/B4DZhe9D7uGgAg-/0/1753939726017?e=1763596800&v=beta&t=OxN_7kGChkG_U0kH07Bfad64CU1DhPkEKAJ8Mc8ytUA"
+  },
+  {
+    id: 26,
+    name: "Balasubramanian Sethuraman",
+    title: "Head HR",
+    company: "Parekh Integrated Services Pvt. Ltd.",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGsjtad0SSsIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724664750297?e=1763596800&v=beta&t=FliP3pANXi5cH3yjAHUgUaz5ODkB1aEpw1E-3PDA3o8"
+  },
+  {
+    id: 27,
+    name: "Gurvinder Kumar",
+    title: "Assistant Vice President - Human Resource",
+    company: "Axis Max Life Insurance",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHmDTxezJC5QA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725479853786?e=1763596800&v=beta&t=ZwLrJpLeiSSms0TlCOtXeYXu95Eg59ZbhGjIVIUQlsA"
+  },
+  {
+    id: 28,
+    name: "Manish Jangid",
+    title: "Head TA",
+    company: "Sterlite Electric",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+  },
+  {
+    id: 29,
+    name: "Krishan Kumar",
+    title: "Head HR",
+    company: "PXIL",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+  }
 ];
 
 const panelists: Panelist[] = [
@@ -373,7 +561,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F5F0EA' }}>
-                Chief Guest
+                CHIEF GUEST
               </h2>
             </div>
             <div
@@ -419,7 +607,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F5F0EA' }}>
-                Christ Leaders
+                CHRIST LEADERS
               </h2>
             </div>
             <div
@@ -468,7 +656,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F5F0EA' }}>
-                Panelists Discussions
+                PANELISTS
               </h2>
             </div>
             <div
@@ -515,7 +703,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F5F0EA' }}>
-                Round Table Sessions
+                ROUND TABLE DISCUSSIONS
               </h2>
             </div>
             <div
