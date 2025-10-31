@@ -52,9 +52,10 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              <li><a href="#speakers" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Speakers</a></li>
-              <li><a href="contact" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Contact Us</a></li>
-              <li><a href="HRPoster.pdf" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>View Brochure</a></li>
+              <li><a href="/#panelists" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Panelists</a></li>
+              <li><a href="/media" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Media</a></li>
+              <li><a href="/contact" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Contact Us</a></li>
+              <li><a href="/HRPoster.pdf" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>View Brochure</a></li>
             </ul>
           </div>
 
@@ -91,7 +92,7 @@ export default function Footer() {
               © 2025 HR Vista 2.0. All rights reserved.
             </p>
             <p className="text-sm" style={{ color: '#D9CBC2' }}>
-              Developed by Tanishq Saini
+              Developed and Maintained by <a href="https://www.linkedin.com/in/tanishq-saini7/" target="_blank" rel="noopener noreferrer" className="hover:underline" style={{ color: '#E0C58E' }}>Tanishq Saini</a>
             </p>
           </div>
         </div>

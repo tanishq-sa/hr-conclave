@@ -7,14 +7,14 @@ import Footer from "@/components/Footer";
 const contacts = [
   {
     id: 1,
-    name: "Shankar Iyer",
+    name: "Prof. Shankar Iyer",
     role: "Head - CPCG",
     email: "shankaran.iyer@christuniversity.in",
     phone: "+91 82912 00603",
   },
   {
     id: 2,
-    name: "Akhil Paul",
+    name: "Prof. Akhil Paul",
     role: "Placement Officer - CPCG",
     email: "akhil.paul@christuniversity.in",
     phone: "+91 81292 66626",
@@ -22,7 +22,7 @@ const contacts = [
   {
     id: 3,
     name: "Rushda Siddiqui",
-    role: "President - CPCG",
+    role: "President - Student Wing CPCG",
     email: "rushda.siddiqui@maedh.christuniversity.in",
     phone: "+91 99199 15111",
   },

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaCalendarAlt, FaMapMarkerAlt, FaUniversity, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt, FaUniversity, FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -19,6 +19,7 @@ interface ChiefGuest {
   title: string;
   company: string;
   image: string;
+  linkedin?: string;
 }
 
 interface ChristLeader {
@@ -27,6 +28,7 @@ interface ChristLeader {
   title: string;
   company: string;
   image: string;
+  linkedin?: string;
 }
 
 interface Panelist {
@@ -35,6 +37,9 @@ interface Panelist {
   title: string;
   company: string;
   image: string;
+  panel: number;
+  role: 'Moderator' | 'Member';
+  linkedin?: string;
 }
 
 interface RoundTableSession {
@@ -43,6 +48,9 @@ interface RoundTableSession {
   title: string;
   company: string;
   image: string;
+  roundTable: number;
+  role: 'Moderator' | 'Panel Member';
+  linkedin?: string;
 }
 
 const roundTableSessions: RoundTableSession[] = [
@@ -51,203 +59,308 @@ const roundTableSessions: RoundTableSession[] = [
     name: "Hitesh Kambli",
     title: "Head – Human Resources",
     company: "Secure Parking India",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I"
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    roundTable: 1,
+    role: 'Panel Member'
   },
   {
     id: 2,
     name: "Rajendra Lingwal",
     title: "Senior Vice President – Human Resources",
     company: "Persistent Systems",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFshcc7hhA1JQ/profile-displayphoto-scale_400_400/B4DZllpqm0IYAg-/0/1758347046222?e=1763596800&v=beta&t=EtWBClmczuHKUlwumfC16ivBSmnLw1qmc_tk72qXMvc"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFshcc7hhA1JQ/profile-displayphoto-scale_400_400/B4DZllpqm0IYAg-/0/1758347046222?e=1763596800&v=beta&t=EtWBClmczuHKUlwumfC16ivBSmnLw1qmc_tk72qXMvc",
+    roundTable: 1,
+    role: 'Panel Member'
   },
   {
     id: 3,
     name: "Karan Gandhi",
     title: "AVP - HR",
     company: "JSW",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQGaVN4ZxbrMZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516254125371?e=1763596800&v=beta&t=oPSKLeU4YUjpSSHL0OEEwSK1iqfhCo4SimTBnFk6CCo"
+    image: "https://media.licdn.com/dms/image/v2/C5603AQGaVN4ZxbrMZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516254125371?e=1763596800&v=beta&t=oPSKLeU4YUjpSSHL0OEEwSK1iqfhCo4SimTBnFk6CCo",
+    roundTable: 1,
+    role: 'Panel Member'
   },
   {
     id: 4,
     name: "Stanley Monteiro",
     title: "Head – Talent Acquisition (Real Estate & Wholesale Finance)",
     company: "Piramal Enterprises Limited",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQGWvJUOW8t-bQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723528106599?e=1763596800&v=beta&t=cBdYrH_kE6kKurjQwy4efygdwDkKrUgkzXwFdTRECAc"
+    image: "https://media.licdn.com/dms/image/v2/D5603AQGWvJUOW8t-bQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723528106599?e=1763596800&v=beta&t=cBdYrH_kE6kKurjQwy4efygdwDkKrUgkzXwFdTRECAc",
+    roundTable: 1,
+    role: 'Panel Member'
   },
   {
     id: 5,
     name: "Parth Kulkarni",
     title: "Vice President – Human Resources (Manufacturing)",
     company: "Schindler India",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGv4IDbR-h4pw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694084412893?e=1763596800&v=beta&t=gOerP7DBiZlVLalZjrsky_m7JdYN90qWiFwF7Y_Bu_I"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGv4IDbR-h4pw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694084412893?e=1763596800&v=beta&t=gOerP7DBiZlVLalZjrsky_m7JdYN90qWiFwF7Y_Bu_I",
+    roundTable: 1,
+    role: 'Panel Member'
   },
   {
     id: 6,
     name: "Neha Verma",
     title: "AGM - HR",
     company: "Aeries",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGdsNmkm1wHxQ/profile-displayphoto-scale_400_400/B4DZouUUz6IgAk-/0/1761713689440?e=1763596800&v=beta&t=9BNrulTov_g3El0Ne2SG_OKwXmaF9q0-y_287stJ5Jw"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGdsNmkm1wHxQ/profile-displayphoto-scale_400_400/B4DZouUUz6IgAk-/0/1761713689440?e=1763596800&v=beta&t=9BNrulTov_g3El0Ne2SG_OKwXmaF9q0-y_287stJ5Jw",
+    roundTable: 1,
+    role: 'Panel Member'
   },
   {
     id: 7,
     name: "Pooja Amravanshi",
     title: "Senior Manager – HR Business Partner",
     company: "Company 3 Method India",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFsLT5QBHw6tw/profile-displayphoto-shrink_400_400/B4DZPVfNGvGoAk-/0/1734453548361?e=1763596800&v=beta&t=44YtnSW9e2FDuU1_VL9o-aataB4ZAe_VN5PYL6ckDvs"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFsLT5QBHw6tw/profile-displayphoto-shrink_400_400/B4DZPVfNGvGoAk-/0/1734453548361?e=1763596800&v=beta&t=44YtnSW9e2FDuU1_VL9o-aataB4ZAe_VN5PYL6ckDvs",
+    roundTable: 1,
+    role: 'Panel Member'
   },
   {
     id: 8,
     name: "Anshuman Das",
     title: "AVP HR Business Partner (Wholesale Finance)",
     company: "Piramal Finance Limited",
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQEvI_lw-_dCPw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1620815306768?e=1763596800&v=beta&t=zgK8jUZMc_T5OWWDoWjI1rf72bbTD30FKLLb6PkOvqU"
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQEvI_lw-_dCPw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1620815306768?e=1763596800&v=beta&t=zgK8jUZMc_T5OWWDoWjI1rf72bbTD30FKLLb6PkOvqU",
+    roundTable: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/anshuman-das-441baa80?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BK2iNOhYySE6Hj7%2BK1dyySw%3D%3D"
   },
   {
     id: 9,
     name: "Sarabjeet Singh",
     title: "Sr. Director",
     company: "OpenGov Inc.",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQFosSPM9rO-6w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1589535137155?e=1763596800&v=beta&t=BpxCYPIKSXO2zlixtugdFbSbhSGQlMaOiMgOkiKm1Sc"
+    image: "https://media.licdn.com/dms/image/v2/C5603AQFosSPM9rO-6w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1589535137155?e=1763596800&v=beta&t=BpxCYPIKSXO2zlixtugdFbSbhSGQlMaOiMgOkiKm1Sc",
+    roundTable: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/sarabjeet-singh-gill?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BHfqAyuQqSwu7o7xTJBu%2FqA%3D%3D"
   },
   {
     id: 10,
     name: "Chirag Trivedi",
     title: "Sr. General Manager - HR",
     company: "VFS Global",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQG9FQ-Ho4Lzow/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686207312500?e=1763596800&v=beta&t=KWBO7wl7Fvbymq2T4a2zX6XZCtqWXoXNGKDKQNaHHgY"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQG9FQ-Ho4Lzow/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686207312500?e=1763596800&v=beta&t=KWBO7wl7Fvbymq2T4a2zX6XZCtqWXoXNGKDKQNaHHgY",
+    roundTable: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/chirag-trivedi-4556348?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BXasrrlvpRGe3%2FJ5vbROd3g%3D%3D"
   },
   {
     id: 11,
     name: "Gaurav Bhalla",
     title: "Head- Global HR Shared Services",
     company: "Sodexo",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQHsWNUq92bMkw/profile-displayphoto-shrink_400_400/B56ZWygQMxGQAk-/0/1742456554873?e=1763596800&v=beta&t=si64iQMvtXhkgOwONJoaLr7_sOvJfi3e7WZFKVUywEI"
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHsWNUq92bMkw/profile-displayphoto-shrink_400_400/B56ZWygQMxGQAk-/0/1742456554873?e=1763596800&v=beta&t=si64iQMvtXhkgOwONJoaLr7_sOvJfi3e7WZFKVUywEI",
+    roundTable: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/gaurav-bhalla-40263620?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BYJOmHciqRxqrS%2BQzBh%2FBmw%3D%3D"
   },
   {
     id: 12,
     name: "Vignesh Seetharaman",
     title: "Head HR",
     company: "Mondelez India BU",
-    image: "https://media.licdn.com/dms/image/v2/C5103AQFA-MQ2pxi3kA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582638375024?e=1763596800&v=beta&t=WpBD_byy5s_S3ywlQuLGhCauBkoiuyoKriyAnL2gRk4"
+    image: "https://media.licdn.com/dms/image/v2/C5103AQFA-MQ2pxi3kA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582638375024?e=1763596800&v=beta&t=WpBD_byy5s_S3ywlQuLGhCauBkoiuyoKriyAnL2gRk4",
+    roundTable: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/vignesh-seetharaman-39917231?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9kL4MhkITeS87EgVNRIrcg%3D%3D"
   },
   {
     id: 13,
     name: "Anand Dhruv",
     title: "Fractional Chief HR Officer",
     company: "RackBank Datacenter",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGNV0uUrwTT1g/profile-displayphoto-shrink_400_400/B4DZdOfbgbGYAk-/0/1749368553330?e=1763596800&v=beta&t=stISJbmHviR7fjD-CotrFFnciVAgqmTf96LxD6ODHQ0"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGNV0uUrwTT1g/profile-displayphoto-shrink_400_400/B4DZdOfbgbGYAk-/0/1749368553330?e=1763596800&v=beta&t=stISJbmHviR7fjD-CotrFFnciVAgqmTf96LxD6ODHQ0",
+    roundTable: 2,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/coachdhruvanand?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bap%2FtQGJSS9yezV0q0dii5Q%3D%3D"
   },
   {
     id: 14,
     name: "Dhwani Patel",
     title: "Human Resources Manager",
     company: "ExSyn Corp",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQF5rpUJpitW7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1668499596106?e=1763596800&v=beta&t=ETsKGTRJoPiqB9wOupv7K5H-7LC3r-W2lIePEV_xLUk"
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQF5rpUJpitW7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1668499596106?e=1763596800&v=beta&t=ETsKGTRJoPiqB9wOupv7K5H-7LC3r-W2lIePEV_xLUk",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/dhwani-patel-26a1b1257?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BrQmS6gkWTzq%2FbvGKEeUnSQ%3D%3D"
   },
   {
     id: 15,
     name: "Rupali Mahadik",
     title: "Global - Employee Experience Program Manager",
     company: "QAD",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQH7_zHLq558Ug/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676920629639?e=1763596800&v=beta&t=ldvVpLTbiqTrQe0m3-ZSa6GgsPoeFtN6j6_5UNrRGf8"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQH7_zHLq558Ug/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676920629639?e=1763596800&v=beta&t=ldvVpLTbiqTrQe0m3-ZSa6GgsPoeFtN6j6_5UNrRGf8",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rupali-mahadikhr?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMSWHqFFESM%2BRSTCxsBFv1g%3D%3D"
   },
   {
     id: 16,
     name: "Prasheel Pardhe",
     title: "Global Human Resources Director",
     company: "Design Industries - Atlassian Partners",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHsXCrwnSf_mQ/profile-displayphoto-scale_400_400/B4DZnoSmF7GgAg-/0/1760538813739?e=1763596800&v=beta&t=TGelCYOy5k2AVrFPsIzoxX0L5NjskvVI6wmk6K6hnyU"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHsXCrwnSf_mQ/profile-displayphoto-scale_400_400/B4DZnoSmF7GgAg-/0/1760538813739?e=1763596800&v=beta&t=TGelCYOy5k2AVrFPsIzoxX0L5NjskvVI6wmk6K6hnyU",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/prasheel-pardhe?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyA%2FelTwTo%2BO9Dt6PBLLzQ%3D%3D"
   },
   {
     id: 17,
     name: "Debansh Roy",
     title: "Head of People | Board Member",
     company: "AllianceBernstein",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHrtYW-z3hyIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718428470626?e=1763596800&v=beta&t=fGzu0QpjCe45zatmu2GzBxeHKElNm5faKVKQgyIeIBI"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHrtYW-z3hyIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718428470626?e=1763596800&v=beta&t=fGzu0QpjCe45zatmu2GzBxeHKElNm5faKVKQgyIeIBI",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/debanshroy?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B8IOiFdN6SxCVG7uvliTN3A%3D%3D"
   },
   {
     id: 18,
     name: "Bobby Kuriakose",
     title: "Director - HR",
     company: "Forbes Marshall",
-    image: "https://media.licdn.com/dms/image/v2/C5103AQFaezLkRDHNaw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1549336075218?e=1763596800&v=beta&t=yGcrOqCfy3_NzS9p8qheeT2ew0T0eU6ZZdJIGm_Zk0Q"
+    image: "https://media.licdn.com/dms/image/v2/C5103AQFaezLkRDHNaw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1549336075218?e=1763596800&v=beta&t=yGcrOqCfy3_NzS9p8qheeT2ew0T0eU6ZZdJIGm_Zk0Q",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/bobby-kuriakose-89028413?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdXoK7EV3SgGh8nbda95XyA%3D%3D"
   },
   {
     id: 19,
     name: "Vaibhav Goel",
     title: "Head - HR",
     company: "Reliance Industries",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHu1g7Tm7NzOw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1613752969626?e=1763596800&v=beta&t=HY1i-sAqDyg5INyxWyj3Q_ic1gJo6RxMauL-ewPBqr0"
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHu1g7Tm7NzOw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1613752969626?e=1763596800&v=beta&t=HY1i-sAqDyg5INyxWyj3Q_ic1gJo6RxMauL-ewPBqr0",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/vaibhav-goel-bb21838?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmP%2FryC7ZQvqtR5BDmQohaw%3D%3D"
   },
   {
     id: 20,
     name: "Varada Gupta",
     title: "Senior HR Manager",
     company: "Entytle",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQHuGMAeEKZ5jA/profile-displayphoto-scale_400_400/B56Zhur4fIHMAo-/0/1754203655932?e=1763596800&v=beta&t=DqUzmGgyO60YHdq-gS_PetN6ycJWYv8z846gWE_vqnQ"
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHuGMAeEKZ5jA/profile-displayphoto-scale_400_400/B56Zhur4fIHMAo-/0/1754203655932?e=1763596800&v=beta&t=DqUzmGgyO60YHdq-gS_PetN6ycJWYv8z846gWE_vqnQ",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/varada-gupta-1bb5a410?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BqbwPpkQ7SnWPRYC2NzrV3g%3D%3D"
   },
   {
     id: 21,
     name: "Rajalakshmi Ranganathan",
     title: "AVP HR",
     company: "Link Intime India",
-    image: "https://media.licdn.com/dms/image/v2/C5103AQHRjkN9z9ILXQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1526105574092?e=1763596800&v=beta&t=Z62hSwY5GbdIxkYD0l6Cbh8eYmdqKJTBKmeAPv6fDds"
+    image: "https://media.licdn.com/dms/image/v2/C5103AQHRjkN9z9ILXQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1526105574092?e=1763596800&v=beta&t=Z62hSwY5GbdIxkYD0l6Cbh8eYmdqKJTBKmeAPv6fDds",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rajalakshmi-ranganathan-b3774924?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BfcQJwrxsQ%2FaFhmVEsPP4yg%3D%3D"
   },
   {
     id: 22,
     name: "Pratixha Narkar",
     title: "Vice President HR",
     company: "Nomura",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFYQP4P1wbdPA/profile-displayphoto-shrink_400_400/B4DZObnxO6HcAg-/0/1733482716752?e=1763596800&v=beta&t=NwgRgy-9_BE5_z6d91CzbK4p_Z5jwzfNqT8Sspx4n-U"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFYQP4P1wbdPA/profile-displayphoto-shrink_400_400/B4DZObnxO6HcAg-/0/1733482716752?e=1763596800&v=beta&t=NwgRgy-9_BE5_z6d91CzbK4p_Z5jwzfNqT8Sspx4n-U",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/pratixha?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2Fx7rRtF5RyW11L7oIidjug%3D%3D"
   },
   {
     id: 23,
     name: "Ruby Baksi",
     title: "Head - Talent Engagement and Development",
     company: "Harbinger Group",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rubybaksi?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BeihDLsuNSQuAgb7o%2F5m9ng%3D%3D"
   },
   {
     id: 24,
     name: "Rohit Kalamkar",
     title: "Director - HR",
     company: "SA Technologies",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQEton91JIg5kA/profile-displayphoto-shrink_400_400/B4DZOGSlsRHoAg-/0/1733124841682?e=1763596800&v=beta&t=FTcBjlopeI_tGLtTZUPOTCbSrhVLbzhFEFJSMnskcvo"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEton91JIg5kA/profile-displayphoto-shrink_400_400/B4DZOGSlsRHoAg-/0/1733124841682?e=1763596800&v=beta&t=FTcBjlopeI_tGLtTZUPOTCbSrhVLbzhFEFJSMnskcvo",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rohitkalamkar?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmzoI1W%2FcSV%2BzxmfmolEEbQ%3D%3D"
   },
   {
     id: 25,
     name: "Madhuri Chhatbar",
     title: "People & Capability Manager - India",
     company: "adm Indicia",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFx-ta1osxLlg/profile-displayphoto-scale_400_400/B4DZhe9D7uGgAg-/0/1753939726017?e=1763596800&v=beta&t=OxN_7kGChkG_U0kH07Bfad64CU1DhPkEKAJ8Mc8ytUA"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFx-ta1osxLlg/profile-displayphoto-scale_400_400/B4DZhe9D7uGgAg-/0/1753939726017?e=1763596800&v=beta&t=OxN_7kGChkG_U0kH07Bfad64CU1DhPkEKAJ8Mc8ytUA",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/madhuri-chhatbar-11497271?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2F6Y%2ByX%2FzSKiDz9fYBPG%2FUw%3D%3D"
   },
   {
     id: 26,
     name: "Balasubramanian Sethuraman",
     title: "Head HR",
     company: "Parekh Integrated Services Pvt. Ltd.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGsjtad0SSsIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724664750297?e=1763596800&v=beta&t=FliP3pANXi5cH3yjAHUgUaz5ODkB1aEpw1E-3PDA3o8"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGsjtad0SSsIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724664750297?e=1763596800&v=beta&t=FliP3pANXi5cH3yjAHUgUaz5ODkB1aEpw1E-3PDA3o8",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/bala-s?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BPOX6mg1CR6W4JuowbasSMA%3D%3D"
   },
   {
     id: 27,
     name: "Gurvinder Kumar",
     title: "Assistant Vice President - Human Resource",
     company: "Axis Max Life Insurance",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHmDTxezJC5QA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725479853786?e=1763596800&v=beta&t=ZwLrJpLeiSSms0TlCOtXeYXu95Eg59ZbhGjIVIUQlsA"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHmDTxezJC5QA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1725479853786?e=1763596800&v=beta&t=ZwLrJpLeiSSms0TlCOtXeYXu95Eg59ZbhGjIVIUQlsA",
+    roundTable: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/gurvinder-kumar-33bb1a1b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTyCgFy4wRYSEoQaA%2BYpu9g%3D%3D"
   },
   {
     id: 28,
     name: "Manish Jangid",
     title: "Head TA",
     company: "Sterlite Electric",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 2,
+    role: 'Panel Member'
   },
   {
     id: 29,
     name: "Krishan Kumar",
     title: "Head HR",
     company: "PXIL",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Panel Member'
+  },
+  {
+    id: 30,
+    name: "Ramanuj Choubey",
+    title: "Associate Director – Global HRBP & Capability Development",
+    company: "Tata Communications Transformation Services",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Moderator'
+  },
+  {
+    id: 31,
+    name: "Rajesh Gupta",
+    title: "Vice President & Head – Business Partner, People & Organization",
+    company: "Generali Central Insurance",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Panel Member'
+  },
+  {
+    id: 32,
+    name: "Kirti Patkar",
+    title: "Sr AGM – HR (Head L&D & HR Tech)",
+    company: "APAR Industries Limited",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Panel Member'
   }
 ];
 
@@ -257,140 +370,200 @@ const panelists: Panelist[] = [
     name: "Abhijit Puri",
     title: "Global HR-TA Leader",
     company: "LTIMindtree",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQEPokzfxgmcmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516267601032?e=1763596800&v=beta&t=beQFRMqzB43l8JpPQmYbN-idDE3ek4wDlY6ON-4nt10"
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQEPokzfxgmcmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516267601032?e=1763596800&v=beta&t=beQFRMqzB43l8JpPQmYbN-idDE3ek4wDlY6ON-4nt10",
+    panel: 1,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/abhijitpuri"
   },
   {
     id: 18,
     name: "Mahesh Joshi",
     title: "CHRO",
     company: "Honeywell",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 3,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/mahesh-joshi-mj-361590a"
   },
   {
     id: 19,
     name: "Anupama Pillai",
     title: "Global Talent Acquisition & Country HR Head",
     company: "HCLSoftware",
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQE9SHj6zkQxnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617707836051?e=1763596800&v=beta&t=2yMnp4ABnE55WvA9dp-YjS_fCr4lqLleTUvg-vNaS1E"
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQE9SHj6zkQxnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617707836051?e=1763596800&v=beta&t=2yMnp4ABnE55WvA9dp-YjS_fCr4lqLleTUvg-vNaS1E",
+    panel: 3,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/anupama-pillai-94a8641a"
   },
   {
     id: 20,
     name: "Abhishek Gupta",
     title: "Head – People & Culture",
     company: "ZebPay",
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQEDmBm5AS60-g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1648733721564?e=1763596800&v=beta&t=jI5HAmwOlp05jOhVjlCtdUZxbH1pXjf4YFM98GP92l0"
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQEDmBm5AS60-g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1648733721564?e=1763596800&v=beta&t=jI5HAmwOlp05jOhVjlCtdUZxbH1pXjf4YFM98GP92l0",
+    panel: 3,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/abhishek-gupta-04905b29"
   },
   {
     id: 2,
     name: "Dr. Rajani Tewari",
     title: "Chief People's Officer",
     company: "GreenCell Mobility",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQFkSf6mElh8ow/profile-displayphoto-shrink_400_400/B4EZcc9XRXHIAk-/0/1748537539557?e=1763596800&v=beta&t=HB9gThfDrUia4GVCTK_Q5re_Ak6qARpmJ2P88fNtvrU"
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQFkSf6mElh8ow/profile-displayphoto-shrink_400_400/B4EZcc9XRXHIAk-/0/1748537539557?e=1763596800&v=beta&t=HB9gThfDrUia4GVCTK_Q5re_Ak6qARpmJ2P88fNtvrU",
+    panel: 1,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/rajanitewari"
   },
   {
     id: 3,
     name: "Farzeen Khan",
     title: "CHRO",
     company: "Being Human Clothing",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQGmeAdmqTIBYg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517702041120?e=1763596800&v=beta&t=E30yLvLX3FyiPr3wRRZ8hvQDHlxDyb1X2YBYx9Om_LI"
+    image: "https://media.licdn.com/dms/image/v2/C5603AQGmeAdmqTIBYg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517702041120?e=1763596800&v=beta&t=E30yLvLX3FyiPr3wRRZ8hvQDHlxDyb1X2YBYx9Om_LI",
+    panel: 1,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/farzeen-khan-b40891b"
   },
   {
     id: 4,
     name: "Moushumi Dhar",
     title: "CHRO",
     company: "Indospace",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 1,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/moushumi-dhar-0662051"
   },
   {
     id: 5,
     name: "Jasmeet Bhatia",
     title: "CHRO",
     company: "Thermal Limited",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGqa8O9symBBw/profile-displayphoto-shrink_400_400/B4DZXtVo2HHkAg-/0/1743443629029?e=1763596800&v=beta&t=DsQonJQty_h_OawTLJvr-7VA_n01YxK0A1Q4tRAeBRc"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGqa8O9symBBw/profile-displayphoto-shrink_400_400/B4DZXtVo2HHkAg-/0/1743443629029?e=1763596800&v=beta&t=DsQonJQty_h_OawTLJvr-7VA_n01YxK0A1Q4tRAeBRc",
+    panel: 1,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/jasmeet-bhatia-a17a77b"
   },
   {
     id: 6,
     name: "Dr. Sandeep Das",
     title: "Senior Vice-President",
     company: "Kodak Mahindra Bank",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGfKgNgv1PKHg/profile-displayphoto-scale_400_400/B4DZmPOMo4HsAg-/0/1759044489534?e=1763596800&v=beta&t=ltDv2q6mebD8Zy02aJNw1RT7RG4DxaVrGZeOgg0c3zc"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGfKgNgv1PKHg/profile-displayphoto-scale_400_400/B4DZmPOMo4HsAg-/0/1759044489534?e=1763596800&v=beta&t=ltDv2q6mebD8Zy02aJNw1RT7RG4DxaVrGZeOgg0c3zc",
+    panel: 1,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/sandeepdas1980"
   },
   {
     id: 7,
     name: "Mukesh Kataria",
     title: "Head of Learning and Development",
     company: "KPMG India",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQFJFZJrpl_ulQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694923189776?e=1763596800&v=beta&t=8azNmsVq9F-ciPddv5HCyr_hnKBVV-_cll-jHlQXajk"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFJFZJrpl_ulQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694923189776?e=1763596800&v=beta&t=8azNmsVq9F-ciPddv5HCyr_hnKBVV-_cll-jHlQXajk",
+    panel: 1,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/mukesh-kataria-lnd"
   },
   {
     id: 8,
     name: "Dr. Saumya Badgayan Dutta",
     title: "Vice President – HR Business Strategy",
     company: "Gold Star Jewellery Pvt Ltd",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGfKgNgv1PKHg/profile-displayphoto-scale_400_400/B4DZmPOMo4HsAg-/0/1759044489534?e=1763596800&v=beta&t=ltDv2q6mebD8Zy02aJNw1RT7RG4DxaVrGZeOgg0c3zc"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQE2_AqTmrbhBQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729660311860?e=1763596800&v=beta&t=crLkgxZAwyFkrMUO-sV7MppTc8i4HanGnywSuddlRLc",
+    panel: 2,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/dr-saumya-badgayan-dutta-70b4b114"
   },
   {
     id: 9,
     name: "Arun Kumar Das",
     title: "Global Head – Learning & Customer Experience (Travel)",
     company: "Sutherland Global Services",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGyfrhWr7eA7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1663639486621?e=1763596800&v=beta&t=DPgmX3QSeA9z9RIDPaZAdtwRMP5d7ECfYpWLhISBcIU"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGyfrhWr7eA7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1663639486621?e=1763596800&v=beta&t=DPgmX3QSeA9z9RIDPaZAdtwRMP5d7ECfYpWLhISBcIU",
+    panel: 2,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/arunkumardas"
   },
   {
     id: 10,
     name: "Sunita Rath",
     title: "Chief People Officer",
     company: "Bandhan Life",
-    image: "https://media.licdn.com/dms/image/v2/C5103AQEv9idr3tNvXw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582294125320?e=1763596800&v=beta&t=maGHgVxBSpibUwvhA1MbnGwppWENe5qyrv3Xqbpq5F4"
+    image: "https://media.licdn.com/dms/image/v2/C5103AQEv9idr3tNvXw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582294125320?e=1763596800&v=beta&t=maGHgVxBSpibUwvhA1MbnGwppWENe5qyrv3Xqbpq5F4",
+    panel: 2,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/sunita-rath-482732b"
   },
   {
     id: 11,
     name: "Swati Dogra",
     title: "Head – Human Resources, South Asia",
     company: "Omya",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQErgPeVw912XA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1662821048626?e=1763596800&v=beta&t=gThfKAB6T9auwiYhmsp4mSAk9x8ghjdhYmjhcvwWYOU"
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQErgPeVw912XA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1662821048626?e=1763596800&v=beta&t=gThfKAB6T9auwiYhmsp4mSAk9x8ghjdhYmjhcvwWYOU",
+    panel: 2,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/swati-dogra"
   },
   {
     id: 12,
     name: "Padmaja Singh Arya",
     title: "Head – Human Resources",
     company: "NSE Cogencis",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png"
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 2,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/padmajasingharya"
   },
   {
     id: 13,
     name: "Arpita Pamnani",
     title: "Vice President Human Resource",
     company: "Axis Bank",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHrJQgeszUgeg/profile-displayphoto-shrink_400_400/B4DZc0bKxFG8Ag-/0/1748931229589?e=1763596800&v=beta&t=7Pb4MF4nL1CtVhecCat4OzPkTh7fJGHqJ-5YvQOCRPg"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHrJQgeszUgeg/profile-displayphoto-shrink_400_400/B4DZc0bKxFG8Ag-/0/1748931229589?e=1763596800&v=beta&t=7Pb4MF4nL1CtVhecCat4OzPkTh7fJGHqJ-5YvQOCRPg",
+    panel: 2,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/arpita-pamnani-3999bba"
   },
   {
     id: 14,
     name: "Dr. Brillian S.K.",
     title: "Executive Vice President & Chief People Officer",
     company: "TimesPro",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQH6xe65KMt1zQ/profile-displayphoto-scale_400_400/B56ZnMeoVKKEAg-/0/1760072206430?e=1763596800&v=beta&t=V-h4qzxVbPtRdvHma5yPxgYTDGYMUXZihEMqYO15hOE"
+    image: "https://media.licdn.com/dms/image/v2/D5603AQH6xe65KMt1zQ/profile-displayphoto-scale_400_400/B56ZnMeoVKKEAg-/0/1760072206430?e=1763596800&v=beta&t=V-h4qzxVbPtRdvHma5yPxgYTDGYMUXZihEMqYO15hOE",
+    panel: 3,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/brillian"
   },
   {
     id: 15,
     name: "Ravi Sharma",
     title: "Chief People Officer",
     company: "Baan Ganga Gold & Diamonds",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHQVy3s0uMcgw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691909758378?e=1763596800&v=beta&t=kekLf3YrtLkFLRvBMJbmnD0jj3nErFLjupTGeNa0b5w"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHQVy3s0uMcgw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691909758378?e=1763596800&v=beta&t=kekLf3YrtLkFLRvBMJbmnD0jj3nErFLjupTGeNa0b5w",
+    panel: 3,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/ravi-sharma-66082215"
   },
   {
     id: 16,
     name: "Dr. Subhash Mali",
     title: "Chief People Officer",
     company: "H.K. Designs (Hari Krishna Group)",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHPhDKxnswVwA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659181227456?e=1763596800&v=beta&t=_Tj0KR77UlHwlh6xpllG0z00q7vCT5fGa6TWMALo0NM"
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHPhDKxnswVwA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659181227456?e=1763596800&v=beta&t=_Tj0KR77UlHwlh6xpllG0z00q7vCT5fGa6TWMALo0NM",
+    panel: 3,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/dr-subhash-mali-56b690a"
   },
   {
     id: 17,
     name: "Preeti Ahuja",
     title: "Chief People Officer",
     company: "Husk Power",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQEojcctNwTuVg/profile-displayphoto-shrink_800_800/B4DZUuZjUBHwAc-/0/1740240208876?e=1763596800&v=beta&t=fLMA8-7mHxEGsQtC5zGol4JZRpHECws9jB216esoRHw"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEojcctNwTuVg/profile-displayphoto-shrink_800_800/B4DZUuZjUBHwAc-/0/1740240208876?e=1763596800&v=beta&t=fLMA8-7mHxEGsQtC5zGol4JZRpHECws9jB216esoRHw",
+    panel: 3,
+    role: 'Member',
+    linkedin: "https://www.linkedin.com/in/preeti-ahuja-21235567"
   }
 ];
 
@@ -400,14 +573,16 @@ const christLeaders: ChristLeader[] = [
     name: "Fr. Lijo Thomas",
     title: "Dean & Director",
     company: "Christ (Deemed to be University) Pune Lavasa Campus",
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQHJYSCEOgY6OA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1627456859146?e=1763596800&v=beta&t=i0oLMxMb165KzmlPEQouqTjXDVJezjf6eN4rsmGM5DI"
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQHJYSCEOgY6OA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1627456859146?e=1763596800&v=beta&t=i0oLMxMb165KzmlPEQouqTjXDVJezjf6eN4rsmGM5DI",
+    linkedin: "https://www.linkedin.com/in/lijo-thomas-1b4459218/"
   },
   {
     id: 2,
     name: "Fr. Justin P Varghese",
     title: "Academic Coordinator",
     company: "Christ (Deemed to be University) Pune Lavasa Campus",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQG-wbh-okkhLw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1644668499646?e=1763596800&v=beta&t=tkwRAJ4vs200sH5LIxf4srJAzxzCWMIDrMwS2_2pZvw"
+    image: "https://media.licdn.com/dms/image/v2/C5603AQG-wbh-okkhLw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1644668499646?e=1763596800&v=beta&t=tkwRAJ4vs200sH5LIxf4srJAzxzCWMIDrMwS2_2pZvw",
+    linkedin: "https://www.linkedin.com/in/justin-p-varghese-2661351a3/"
   },
 ];
 
@@ -417,14 +592,16 @@ const chiefGuests: ChiefGuest[] = [
     name: "Unmesh Pawar",
     title: "Chief People Officer South Asia",
     company: "dentsu",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQG9fpOxVcbCTw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669463519137?e=1763596800&v=beta&t=7tEy6WXyQlVddMlRmeNb8KmkO0mzJ7ycAeogxzdoEFM"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQG9fpOxVcbCTw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669463519137?e=1763596800&v=beta&t=7tEy6WXyQlVddMlRmeNb8KmkO0mzJ7ycAeogxzdoEFM",
+    linkedin: "https://www.linkedin.com/in/unmeshpawar/"
   },
   {
     id: 2,
     name: "Dr. Radhakrishnan Pillai",
     title: "Director",
     company: "Chanakya International Institute of Leadership Studies, University of Mumbai",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQESZgdo6UjLgQ/profile-displayphoto-scale_400_400/B4DZd9tKBBGsAg-/0/1750160681231?e=1763596800&v=beta&t=ZAvWYCOi-7nfPwblhzuawPm7dlOccmHpb3PTp7yeHUA"
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQESZgdo6UjLgQ/profile-displayphoto-scale_400_400/B4DZd9tKBBGsAg-/0/1750160681231?e=1763596800&v=beta&t=ZAvWYCOi-7nfPwblhzuawPm7dlOccmHpb3PTp7yeHUA",
+    linkedin: "https://www.linkedin.com/in/rchanakyapillai"
   },
 ];
 const speakers: Speaker[] = [
@@ -644,8 +821,18 @@ export default function Home() {
                       />
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300" style={{ color: '#F5F0EA' }}>
+                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
                       {chiefGuest.name}
+                      {chiefGuest.linkedin && (
+                        <a 
+                          href={chiefGuest.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-[#E0C58E] transition-colors"
+                        >
+                          <FaLinkedin size={16} />
+                        </a>
+                      )}
                     </h3>
                     <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
                       {chiefGuest.title}
@@ -690,8 +877,18 @@ export default function Home() {
                       />
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300" style={{ color: '#F5F0EA' }}>
+                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
                       {christLeader.name}
+                      {christLeader.linkedin && (
+                        <a 
+                          href={christLeader.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-[#E0C58E] transition-colors"
+                        >
+                          <FaLinkedin size={16} />
+                        </a>
+                      )}
                     </h3>
                     <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
                       {christLeader.title}
@@ -716,42 +913,120 @@ export default function Home() {
                 PANELISTS
               </h2>
             </div>
-            <div
-              className={`grid ${getGridClass(panelists.length)} gap-8 justify-items-center max-w-5xl mx-auto`}
-            >
-              {panelists.map((panelist, index) => (
-                <div 
-                  key={panelist.id} 
-                  className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
-                  style={{ 
-                    backgroundColor: '#F5F0EA20', 
-                    borderColor: '#E0C58E40',
-                    animationDelay: `${index * 100}ms` 
-                  }}
-                >
-                  <div className="text-center">
-                    {/* Speaker Photo */}
-                    <div className="relative mb-6">
-                      <img 
-                        src={panelist.image}
-                        alt={panelist.name}
-                        className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                      />
+
+            {([1, 2, 3] as const).map((panelNumber) => {
+              const titleMap: Record<number, string> = {
+                1: 'Reimagining Work Architecture: Skills, Roles & AI Integration',
+                2: 'HR Analytics & Decision Intelligence: From Data to Strategic Impact',
+                3: 'Human-Centric Leadership in the Age of AI',
+              };
+              const panelGroup = panelists.filter(p => p.panel === panelNumber);
+              const moderators = panelGroup.filter(p => p.role === 'Moderator');
+              const members = panelGroup.filter(p => p.role === 'Member');
+              return (
+                <div key={panelNumber} className="mb-16">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center" style={{ color: '#E0C58E' }}>
+                    Panel {panelNumber}: {titleMap[panelNumber]}
+                  </h3>
+
+                  <div className="mb-8">
+                    <h4 className="text-xl font-semibold mb-4 text-center" style={{ color: '#F5F0EA' }}>
+                      Moderator
+                    </h4>
+                    <div className={`grid ${getGridClass(moderators.length)} gap-8 justify-items-center max-w-5xl mx-auto`}>
+                      {moderators.map((panelist, index) => (
+                        <div
+                          key={panelist.id}
+                          className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
+                          style={{
+                            backgroundColor: '#F5F0EA20',
+                            borderColor: '#E0C58E40',
+                            animationDelay: `${index * 100}ms`
+                          }}
+                        >
+                          <div className="text-center">
+                            <div className="relative mb-6">
+                              <img
+                                src={panelist.image}
+                                alt={panelist.name}
+                                className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                              />
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
+                              {panelist.name}
+                              {panelist.linkedin && (
+                                <a 
+                                  href={panelist.linkedin} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="hover:text-[#E0C58E] transition-colors"
+                                >
+                                  <FaLinkedin size={16} />
+                                </a>
+                              )}
+                            </h3>
+                            <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
+                              {panelist.title}
+                            </p>
+                            <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
+                              {panelist.company}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                    
-                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300" style={{ color: '#F5F0EA' }}>
-                      {panelist.name}
-                    </h3>
-                    <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
-                      {panelist.title}
-                    </p>
-                    <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
-                      {panelist.company}
-                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-4 text-center" style={{ color: '#F5F0EA' }}>
+                      Members
+                    </h4>
+                    <div className={`grid ${getGridClass(members.length)} gap-8 justify-items-center max-w-5xl mx-auto`}>
+                      {members.map((panelist, index) => (
+                        <div
+                          key={panelist.id}
+                          className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
+                          style={{
+                            backgroundColor: '#F5F0EA20',
+                            borderColor: '#E0C58E40',
+                            animationDelay: `${index * 100}ms`
+                          }}
+                        >
+                          <div className="text-center">
+                            <div className="relative mb-6">
+                              <img
+                                src={panelist.image}
+                                alt={panelist.name}
+                                className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                              />
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
+                              {panelist.name}
+                              {panelist.linkedin && (
+                                <a 
+                                  href={panelist.linkedin} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="hover:text-[#E0C58E] transition-colors"
+                                >
+                                  <FaLinkedin size={16} />
+                                </a>
+                              )}
+                            </h3>
+                            <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
+                              {panelist.title}
+                            </p>
+                            <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
+                              {panelist.company}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </section>
 
@@ -763,42 +1038,119 @@ export default function Home() {
                 ROUND TABLE DISCUSSIONS
               </h2>
             </div>
-            <div
-              className={`grid ${getGridClass(roundTableSessions.length)} gap-8 justify-items-center max-w-5xl mx-auto`}
-            >
-              {roundTableSessions.map((roundTableSession, index) => (
-                <div 
-                  key={roundTableSession.id} 
-                  className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
-                  style={{ 
-                    backgroundColor: '#F5F0EA20', 
-                    borderColor: '#E0C58E40',
-                    animationDelay: `${index * 100}ms` 
-                  }}
-                >
-                  <div className="text-center">
-                    {/* Speaker Photo */}
-                    <div className="relative mb-6">
-                      <img 
-                        src={roundTableSession.image}
-                        alt={roundTableSession.name}
-                        className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                      />
+
+            {([1, 2] as const).map((roundTableNumber) => {
+              const titleMap: Record<number, string> = {
+                1: 'Building Future-Ready Leadership Pipeline',
+                2: 'Employee Experience in the Digital Age',
+              };
+              const roundTableGroup = roundTableSessions.filter(rt => rt.roundTable === roundTableNumber);
+              const moderators = roundTableGroup.filter(rt => rt.role === 'Moderator');
+              const members = roundTableGroup.filter(rt => rt.role === 'Panel Member');
+              return (
+                <div key={roundTableNumber} className="mb-16">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center" style={{ color: '#E0C58E' }}>
+                    Round Table {roundTableNumber}: {titleMap[roundTableNumber]}
+                  </h3>
+
+                  <div className="mb-8">
+                    <h4 className="text-xl font-semibold mb-4 text-center" style={{ color: '#F5F0EA' }}>
+                      Moderator
+                    </h4>
+                    <div className={`grid ${getGridClass(moderators.length)} gap-8 justify-items-center max-w-5xl mx-auto`}>
+                      {moderators.map((roundTableSession, index) => (
+                        <div
+                          key={roundTableSession.id}
+                          className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
+                          style={{
+                            backgroundColor: '#F5F0EA20',
+                            borderColor: '#E0C58E40',
+                            animationDelay: `${index * 100}ms`
+                          }}
+                        >
+                          <div className="text-center">
+                            <div className="relative mb-6">
+                              <img
+                                src={roundTableSession.image}
+                                alt={roundTableSession.name}
+                                className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                              />
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
+                              {roundTableSession.name}
+                              {roundTableSession.linkedin && (
+                                <a 
+                                  href={roundTableSession.linkedin} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="hover:text-[#E0C58E] transition-colors"
+                                >
+                                  <FaLinkedin size={16} />
+                                </a>
+                              )}
+                            </h3>
+                            <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
+                              {roundTableSession.title}
+                            </p>
+                            <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
+                              {roundTableSession.company}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                    
-                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300" style={{ color: '#F5F0EA' }}>
-                      {roundTableSession.name}
-                    </h3>
-                    <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
-                      {roundTableSession.title}
-                    </p>
-                    <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
-                      {roundTableSession.company}
-                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold mb-4 text-center" style={{ color: '#F5F0EA' }}>
+                      Panel Members
+                    </h4>
+                    <div className={`grid ${getGridClass(members.length)} gap-8 justify-items-center max-w-5xl mx-auto`}>
+                      {members.map((roundTableSession, index) => (
+                        <div
+                          key={roundTableSession.id}
+                          className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
+                          style={{
+                            backgroundColor: '#F5F0EA20',
+                            borderColor: '#E0C58E40',
+                            animationDelay: `${index * 100}ms`
+                          }}
+                        >
+                          <div className="text-center">
+                            <div className="relative mb-6">
+                              <img
+                                src={roundTableSession.image}
+                                alt={roundTableSession.name}
+                                className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                              />
+                            </div>
+                            <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
+                              {roundTableSession.name}
+                              {roundTableSession.linkedin && (
+                                <a 
+                                  href={roundTableSession.linkedin} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="hover:text-[#E0C58E] transition-colors"
+                                >
+                                  <FaLinkedin size={16} />
+                                </a>
+                              )}
+                            </h3>
+                            <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
+                              {roundTableSession.title}
+                            </p>
+                            <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
+                              {roundTableSession.company}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </section>
       </main>

@@ -13,7 +13,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Speakers', href: '/#speakers' },
+    { name: 'Panelists', href: '/#panelists' },
+    { name: 'Media', href: '/media' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -44,12 +45,20 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
               <Link 
-                href="/#speakers" 
-                className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'speakers' ? 'opacity-100' : 'opacity-80'}`} 
-                style={{ color: activePage === 'speakers' ? '#E0C58E' : '#D9CBC2' }}
+                href="/#panelists" 
+                className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'panelists' ? 'opacity-100' : 'opacity-80'}`} 
+                style={{ color: activePage === 'panelists' ? '#E0C58E' : '#D9CBC2' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Speakers
+                Panelists
+              </Link>
+              <Link 
+                href="/media" 
+                className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'media' ? 'opacity-100' : 'opacity-80'}`} 
+                style={{ color: activePage === 'media' ? '#E0C58E' : '#D9CBC2' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Media
               </Link>
               <Link 
                 href="/contact" 
@@ -99,12 +108,20 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           <div className="md:hidden absolute top-full left-0 right-0 z-30" style={{ backgroundColor: '#112250' }}>
             <div className="px-4 py-6 space-y-4 border-t" style={{ borderColor: '#3B507D' }}>
               <Link 
-                href="/#speakers" 
-                className={`block text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'speakers' ? 'opacity-100' : 'opacity-80'}`} 
-                style={{ color: activePage === 'speakers' ? '#E0C58E' : '#D9CBC2' }}
+                href="/#panelists" 
+                className={`block text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'panelists' ? 'opacity-100' : 'opacity-80'}`} 
+                style={{ color: activePage === 'panelists' ? '#E0C58E' : '#D9CBC2' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Speakers
+                Panelists
+              </Link>
+              <Link 
+                href="/media" 
+                className={`block text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'media' ? 'opacity-100' : 'opacity-80'}`} 
+                style={{ color: activePage === 'media' ? '#E0C58E' : '#D9CBC2' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Media
               </Link>
               <Link 
                 href="/contact" 
@@ -117,7 +134,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
               <button 
                 className="px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105" 
                 style={{ backgroundColor: '#E0C58E', color: '#112250' }}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { window.open('/HRPoster.pdf', '_blank'); setIsMobileMenuOpen(false); }}
               >
                 View Brochure
               </button>
