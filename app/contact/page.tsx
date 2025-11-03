@@ -30,7 +30,7 @@ const contacts = [
     id: 4,
     name: "Shyambahadur Prajapati",
     role: "Being HR",
-    email: "Shyam@gminfotech.in",
+    email: "Shyam@beinghr.online",
     phone: "+91 92215 49250",
   },
 ];

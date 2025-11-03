@@ -38,7 +38,7 @@ interface Panelist {
   company: string;
   image: string;
   panel: number;
-  role: 'Moderator' | 'Member';
+  role: 'Moderator' | 'Member' | 'Panel Member';
   linkedin?: string;
 }
 
@@ -48,8 +48,9 @@ interface RoundTableSession {
   title: string;
   company: string;
   image: string;
-  roundTable: number;
-  role: 'Moderator' | 'Panel Member';
+  roundTable?: number;
+  panel?: number;
+  role: 'Moderator' | 'Panel Member' | 'Panelist' | 'Keynote Speaker';
   linkedin?: string;
 }
 
@@ -61,7 +62,8 @@ const roundTableSessions: RoundTableSession[] = [
     company: "Secure Parking India",
     image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/hitesh-kambli-98724615"
   },
   {
     id: 2,
@@ -70,7 +72,8 @@ const roundTableSessions: RoundTableSession[] = [
     company: "Persistent Systems",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQFshcc7hhA1JQ/profile-displayphoto-scale_400_400/B4DZllpqm0IYAg-/0/1758347046222?e=1763596800&v=beta&t=EtWBClmczuHKUlwumfC16ivBSmnLw1qmc_tk72qXMvc",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rajendra-lingwal-gphr-executive-coach-7bb2161/"
   },
   {
     id: 3,
@@ -79,7 +82,8 @@ const roundTableSessions: RoundTableSession[] = [
     company: "JSW",
     image: "https://media.licdn.com/dms/image/v2/C5603AQGaVN4ZxbrMZA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516254125371?e=1763596800&v=beta&t=oPSKLeU4YUjpSSHL0OEEwSK1iqfhCo4SimTBnFk6CCo",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/karangandhi/"
   },
   {
     id: 4,
@@ -88,7 +92,8 @@ const roundTableSessions: RoundTableSession[] = [
     company: "Piramal Enterprises Limited",
     image: "https://media.licdn.com/dms/image/v2/D5603AQGWvJUOW8t-bQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723528106599?e=1763596800&v=beta&t=cBdYrH_kE6kKurjQwy4efygdwDkKrUgkzXwFdTRECAc",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/stanleymonteiro/"
   },
   {
     id: 5,
@@ -97,7 +102,8 @@ const roundTableSessions: RoundTableSession[] = [
     company: "Schindler India",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQGv4IDbR-h4pw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694084412893?e=1763596800&v=beta&t=gOerP7DBiZlVLalZjrsky_m7JdYN90qWiFwF7Y_Bu_I",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/parth-kulkarni-43721188/"
   },
   {
     id: 6,
@@ -106,7 +112,8 @@ const roundTableSessions: RoundTableSession[] = [
     company: "Aeries",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQGdsNmkm1wHxQ/profile-displayphoto-scale_400_400/B4DZouUUz6IgAk-/0/1761713689440?e=1763596800&v=beta&t=9BNrulTov_g3El0Ne2SG_OKwXmaF9q0-y_287stJ5Jw",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/-neha-verma/"
   },
   {
     id: 7,
@@ -115,7 +122,8 @@ const roundTableSessions: RoundTableSession[] = [
     company: "Company 3 Method India",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQFsLT5QBHw6tw/profile-displayphoto-shrink_400_400/B4DZPVfNGvGoAk-/0/1734453548361?e=1763596800&v=beta&t=44YtnSW9e2FDuU1_VL9o-aataB4ZAe_VN5PYL6ckDvs",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/poojaamravanshi1512/"
   },
   {
     id: 8,
@@ -145,7 +153,7 @@ const roundTableSessions: RoundTableSession[] = [
     image: "https://media.licdn.com/dms/image/v2/D4D03AQG9FQ-Ho4Lzow/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1686207312500?e=1763596800&v=beta&t=KWBO7wl7Fvbymq2T4a2zX6XZCtqWXoXNGKDKQNaHHgY",
     roundTable: 1,
     role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/chirag-trivedi-4556348?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BXasrrlvpRGe3%2FJ5vbROd3g%3D%3D"
+    linkedin: "https://www.linkedin.com/in/chirag-trivedi-4556348/"
   },
   {
     id: 11,
@@ -155,7 +163,7 @@ const roundTableSessions: RoundTableSession[] = [
     image: "https://media.licdn.com/dms/image/v2/D5603AQHsWNUq92bMkw/profile-displayphoto-shrink_400_400/B56ZWygQMxGQAk-/0/1742456554873?e=1763596800&v=beta&t=si64iQMvtXhkgOwONJoaLr7_sOvJfi3e7WZFKVUywEI",
     roundTable: 1,
     role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/gaurav-bhalla-40263620?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BYJOmHciqRxqrS%2BQzBh%2FBmw%3D%3D"
+    linkedin: "https://www.linkedin.com/in/gaurav-bhalla-40263620/"
   },
   {
     id: 12,
@@ -175,7 +183,7 @@ const roundTableSessions: RoundTableSession[] = [
     image: "https://media.licdn.com/dms/image/v2/D4D03AQGNV0uUrwTT1g/profile-displayphoto-shrink_400_400/B4DZdOfbgbGYAk-/0/1749368553330?e=1763596800&v=beta&t=stISJbmHviR7fjD-CotrFFnciVAgqmTf96LxD6ODHQ0",
     roundTable: 2,
     role: 'Moderator',
-    linkedin: "https://www.linkedin.com/in/coachdhruvanand?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bap%2FtQGJSS9yezV0q0dii5Q%3D%3D"
+    linkedin: "https://www.linkedin.com/in/coachdhruvanand/"
   },
   {
     id: 14,
@@ -185,7 +193,7 @@ const roundTableSessions: RoundTableSession[] = [
     image: "https://media.licdn.com/dms/image/v2/D4E03AQF5rpUJpitW7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1668499596106?e=1763596800&v=beta&t=ETsKGTRJoPiqB9wOupv7K5H-7LC3r-W2lIePEV_xLUk",
     roundTable: 2,
     role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/dhwani-patel-26a1b1257?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BrQmS6gkWTzq%2FbvGKEeUnSQ%3D%3D"
+    linkedin: "https://www.linkedin.com/in/dhwani-patel-26a1b1257/"
   },
   {
     id: 15,
@@ -195,7 +203,187 @@ const roundTableSessions: RoundTableSession[] = [
     image: "https://media.licdn.com/dms/image/v2/D4D03AQH7_zHLq558Ug/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1676920629639?e=1763596800&v=beta&t=ldvVpLTbiqTrQe0m3-ZSa6GgsPoeFtN6j6_5UNrRGf8",
     roundTable: 2,
     role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/rupali-mahadikhr?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMSWHqFFESM%2BRSTCxsBFv1g%3D%3D"
+    linkedin: "https://www.linkedin.com/in/rupali-mahadikhr/"
+  },
+  {
+    id: 16,
+    name: "Kirti Patkar",
+    title: "Sr AGM – HR (Head L&D & HR Tech)",
+    company: "APAR Industries Limited",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQHzGin6Na_HpA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1604690453664?e=1763596800&v=beta&t=-6QwM_7ObBn04zMSrVdqN6_hBX7UCJnnzcNliZFuV7k",
+    roundTable: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/kirti-patkar-31105555/"
+  },
+  {
+    id: 17,
+    name: "Ramanuj Choubey",
+    title: "Associate Director – Global HRBP & Capability Development",
+    company: "Tata Communications Transformation Services",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    roundTable: 1,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/ramanuj-choubey-634a9b8/"
+  },
+  {
+    id: 18,
+    name: "Unmesh Pawar",
+    title: "CPO",
+    company: "Dentsu",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    role: 'Panel Member',
+    roundTable: 0, // Special round table for keynote speakers
+    linkedin: "https://www.linkedin.com/in/unmeshpawar/"
+  },
+  {
+    id: 19,
+    name: "Dr. Rajani Tewari",
+    title: "Chief People Officer",
+    company: "GreenCell Mobility",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rajanitewari/"
+  },
+  {
+    id: 20,
+    name: "Farzeen Khan",
+    title: "Chief Human Resources Officer",
+    company: "Being Human Clothing",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/farzeen-khan-b40891b/"
+  },
+  {
+    id: 21,
+    name: "Moushumi Dhar",
+    title: "Chief Human Resources Officer",
+    company: "IndoSpace",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/moushumi-dhar-0662051/"
+  },
+  {
+    id: 22,
+    name: "Dr. Sandeep Das",
+    title: "Senior Vice President & Head – Domain Training",
+    company: "Kotak Mahindra Bank",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/sandeepdas1980/"
+  },
+  {
+    id: 23,
+    name: "Mukesh Kataria",
+    title: "Director – Learning & Development",
+    company: "KPMG India",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 1,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/mukesh-kataria-lnd/"
+  },
+  {
+    id: 24,
+    name: "Abhijit Puri",
+    title: "Global HR-TA Leader",
+    company: "LTIMindtree",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 1,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/abhijitpuri"
+  },
+  {
+    id: 25,
+    name: "Arun Kumar Das",
+    title: "Global Head – Learning & Customer Experience (Travel)",
+    company: "Sutherland Global Services",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/arunkumardas/"
+  },
+  {
+    id: 26,
+    name: "Swati Dogra",
+    title: "Head – Human Resources, South Asia",
+    company: "Omya",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/swati-dogra/"
+  },
+  {
+    id: 7,
+    name: "Dr. Saumya Badgayan Dutta",
+    title: "Vice President – HR Business Strategy",
+    company: "Gold Star Jewellery Pvt Ltd",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQE2_AqTmrbhBQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729660311860?e=1763596800&v=beta&t=crLkgxZAwyFkrMUO-sV7MppTc8i4HanGnywSuddlRLc",
+    panel: 2,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/dr-saumya-badgayan-dutta-70b4b114"
+  },
+  {
+    id: 29,
+    name: "Ravi Sharma",
+    title: "Chief People Officer",
+    company: "Baan Ganga Gold & Diamonds",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 3,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/ravi-sharma-66082215/"
+  },
+  {
+    id: 30,
+    name: "Dr. Subhash Mali",
+    title: "Chief People Officer",
+    company: "H.K. Designs (Hari Krishna Group)",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 3,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/dr-subhash-mali-56b690a/"
+  },
+  {
+    id: 31,
+    name: "Preeti Ahuja",
+    title: "Chief People Officer",
+    company: "Husk Power",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 3,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/preeti-ahuja-21235567/"
+  },
+  {
+    id: 32,
+    name: "Anupama Pillai",
+    title: "Global Talent Acquisition & Country HR Head",
+    company: "HCLSoftware",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 3,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/anupama-pillai-94a8641a/"
+  },
+  {
+    id: 33,
+    name: "Abhishek Gupta",
+    title: "Head – People & Culture",
+    company: "ZebPay",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 3,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/abhishek-gupta-04905b29/"
+  },
+  {
+    id: 34,
+    name: "Dr. Brillian S.K.",
+    title: "Executive Vice President & Chief People Officer",
+    company: "TimesPro",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    panel: 3,
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/brillian/"
   },
   {
     id: 16,
@@ -475,6 +663,7 @@ const panelists: Panelist[] = [
     role: 'Moderator',
     linkedin: "https://www.linkedin.com/in/dr-saumya-badgayan-dutta-70b4b114"
   },
+  // Panel 2 Members
   {
     id: 9,
     name: "Arun Kumar Das",
@@ -482,7 +671,7 @@ const panelists: Panelist[] = [
     company: "Sutherland Global Services",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQGyfrhWr7eA7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1663639486621?e=1763596800&v=beta&t=DPgmX3QSeA9z9RIDPaZAdtwRMP5d7ECfYpWLhISBcIU",
     panel: 2,
-    role: 'Member',
+    role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/arunkumardas"
   },
   {
@@ -492,7 +681,7 @@ const panelists: Panelist[] = [
     company: "Bandhan Life",
     image: "https://media.licdn.com/dms/image/v2/C5103AQEv9idr3tNvXw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582294125320?e=1763596800&v=beta&t=maGHgVxBSpibUwvhA1MbnGwppWENe5qyrv3Xqbpq5F4",
     panel: 2,
-    role: 'Member',
+    role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/sunita-rath-482732b"
   },
   {
@@ -502,7 +691,7 @@ const panelists: Panelist[] = [
     company: "Omya",
     image: "https://media.licdn.com/dms/image/v2/C4D03AQErgPeVw912XA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1662821048626?e=1763596800&v=beta&t=gThfKAB6T9auwiYhmsp4mSAk9x8ghjdhYmjhcvwWYOU",
     panel: 2,
-    role: 'Member',
+    role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/swati-dogra"
   },
   {
@@ -512,7 +701,7 @@ const panelists: Panelist[] = [
     company: "NSE Cogencis",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     panel: 2,
-    role: 'Member',
+    role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/padmajasingharya"
   },
   {
@@ -522,9 +711,10 @@ const panelists: Panelist[] = [
     company: "Axis Bank",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQHrJQgeszUgeg/profile-displayphoto-shrink_400_400/B4DZc0bKxFG8Ag-/0/1748931229589?e=1763596800&v=beta&t=7Pb4MF4nL1CtVhecCat4OzPkTh7fJGHqJ-5YvQOCRPg",
     panel: 2,
-    role: 'Member',
+    role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/arpita-pamnani-3999bba"
   },
+  // Panel 3 Moderator
   {
     id: 14,
     name: "Dr. Brillian S.K.",
@@ -922,7 +1112,7 @@ export default function Home() {
               };
               const panelGroup = panelists.filter(p => p.panel === panelNumber);
               const moderators = panelGroup.filter(p => p.role === 'Moderator');
-              const members = panelGroup.filter(p => p.role === 'Member');
+              const members = panelGroup.filter(p => p.role === 'Member' || p.role === 'Panel Member');
               return (
                 <div key={panelNumber} className="mb-16">
                   <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center" style={{ color: '#E0C58E' }}>
