@@ -190,7 +190,7 @@ const roundTableSessions: RoundTableSession[] = [
     name: "Dhwani Patel",
     title: "Human Resources Manager",
     company: "ExSyn Corp",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQF5rpUJpitW7g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1668499596106?e=1763596800&v=beta&t=ETsKGTRJoPiqB9wOupv7K5H-7LC3r-W2lIePEV_xLUk",
+    image: "https://i.ibb.co/hJDRZxNn/Dhwani-Patel-2.jpg",
     roundTable: 2,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/dhwani-patel-26a1b1257/"
