@@ -717,16 +717,6 @@ const panelists: Panelist[] = [
     linkedin: "https://www.linkedin.com/in/brillian"
   },
   {
-    id: 15,
-    name: "Ravi Sharma",
-    title: "Chief People Officer",
-    company: "Baan Ganga Gold & Diamonds",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHQVy3s0uMcgw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691909758378?e=1763596800&v=beta&t=kekLf3YrtLkFLRvBMJbmnD0jj3nErFLjupTGeNa0b5w",
-    panel: 3,
-    role: 'Member',
-    linkedin: "https://www.linkedin.com/in/ravi-sharma-66082215"
-  },
-  {
     id: 16,
     name: "Dr. Subhash Mali",
     title: "Chief People Officer",
