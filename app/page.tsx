@@ -524,15 +524,6 @@ const roundTableSessions: RoundTableSession[] = [
     role: 'Panel Member'
   },
   {
-    id: 30,
-    name: "Ramanuj Choubey",
-    title: "Associate Director – Global HRBP & Capability Development",
-    company: "Tata Communications Transformation Services",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    roundTable: 1,
-    role: 'Moderator'
-  },
-  {
     id: 31,
     name: "Rajesh Gupta",
     title: "Vice President & Head – Business Partner, People & Organization",
