@@ -220,7 +220,7 @@ const roundTableSessions: RoundTableSession[] = [
     name: "Ramanuj Choubey",
     title: "Associate Director – Global HRBP & Capability Development",
     company: "Tata Communications Transformation Services",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
+    image: "https://media.licdn.com/dms/image/v2/C5103AQHJcnPB7SWGiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1578994281626?e=1764201600&v=beta&t=ilOv_vzPRoKhOAZPz1ZzMwF2q7W0ku3oMoEN6ivHUvw",
     roundTable: 1,
     role: 'Moderator',
     linkedin: "https://www.linkedin.com/in/ramanuj-choubey-634a9b8/"
@@ -246,16 +246,6 @@ const roundTableSessions: RoundTableSession[] = [
     linkedin: "https://www.linkedin.com/in/rajanitewari/"
   },
   {
-    id: 20,
-    name: "Farzeen Khan",
-    title: "Chief Human Resources Officer",
-    company: "Being Human Clothing",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
-    panel: 1,
-    role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/farzeen-khan-b40891b/"
-  },
-  {
     id: 21,
     name: "Moushumi Dhar",
     title: "Chief Human Resources Officer",
@@ -274,16 +264,6 @@ const roundTableSessions: RoundTableSession[] = [
     panel: 1,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/sandeepdas1980/"
-  },
-  {
-    id: 23,
-    name: "Mukesh Kataria",
-    title: "Director – Learning & Development",
-    company: "KPMG India",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
-    panel: 1,
-    role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/mukesh-kataria-lnd/"
   },
   {
     id: 24,
@@ -326,16 +306,6 @@ const roundTableSessions: RoundTableSession[] = [
     linkedin: "https://www.linkedin.com/in/dr-saumya-badgayan-dutta-70b4b114"
   },
   {
-    id: 29,
-    name: "Ravi Sharma",
-    title: "Chief People Officer",
-    company: "Baan Ganga Gold & Diamonds",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
-    panel: 3,
-    role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/ravi-sharma-66082215/"
-  },
-  {
     id: 30,
     name: "Dr. Subhash Mali",
     title: "Chief People Officer",
@@ -366,16 +336,6 @@ const roundTableSessions: RoundTableSession[] = [
     linkedin: "https://www.linkedin.com/in/anupama-pillai-94a8641a/"
   },
   {
-    id: 33,
-    name: "Abhishek Gupta",
-    title: "Head – People & Culture",
-    company: "ZebPay",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQHqRzCGdrywiQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516556042842?e=1763596800&v=beta&t=efyyrD91we4PiPJaid2lCpvOSPk5JZMn1NLX4zg5l-I",
-    panel: 3,
-    role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/abhishek-gupta-04905b29/"
-  },
-  {
     id: 34,
     name: "Dr. Brillian S.K.",
     title: "Executive Vice President & Chief People Officer",
@@ -384,16 +344,6 @@ const roundTableSessions: RoundTableSession[] = [
     panel: 3,
     role: 'Moderator',
     linkedin: "https://www.linkedin.com/in/brillian/"
-  },
-  {
-    id: 16,
-    name: "Prasheel Pardhe",
-    title: "Global Human Resources Director",
-    company: "Design Industries - Atlassian Partners",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHsXCrwnSf_mQ/profile-displayphoto-scale_400_400/B4DZnoSmF7GgAg-/0/1760538813739?e=1763596800&v=beta&t=TGelCYOy5k2AVrFPsIzoxX0L5NjskvVI6wmk6K6hnyU",
-    roundTable: 2,
-    role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/prasheel-pardhe?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyA%2FelTwTo%2BO9Dt6PBLLzQ%3D%3D"
   },
   {
     id: 17,
@@ -524,15 +474,6 @@ const roundTableSessions: RoundTableSession[] = [
     role: 'Panel Member'
   },
   {
-    id: 31,
-    name: "Rajesh Gupta",
-    title: "Vice President & Head – Business Partner, People & Organization",
-    company: "Generali Central Insurance",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    roundTable: 1,
-    role: 'Panel Member'
-  },
-  {
     id: 32,
     name: "Kirti Patkar",
     title: "Sr AGM – HR (Head L&D & HR Tech)",
@@ -553,16 +494,6 @@ const panelists: Panelist[] = [
     panel: 1,
     role: 'Moderator',
     linkedin: "https://www.linkedin.com/in/abhijitpuri"
-  },
-  {
-    id: 18,
-    name: "Mahesh Joshi",
-    title: "CHRO",
-    company: "Honeywell",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    panel: 3,
-    role: 'Member',
-    linkedin: "https://www.linkedin.com/in/mahesh-joshi-mj-361590a"
   },
   {
     id: 19,
@@ -615,16 +546,6 @@ const panelists: Panelist[] = [
     linkedin: "https://www.linkedin.com/in/moushumi-dhar-0662051"
   },
   {
-    id: 5,
-    name: "Jasmeet Bhatia",
-    title: "CHRO",
-    company: "Thermal Limited",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGqa8O9symBBw/profile-displayphoto-shrink_400_400/B4DZXtVo2HHkAg-/0/1743443629029?e=1763596800&v=beta&t=DsQonJQty_h_OawTLJvr-7VA_n01YxK0A1Q4tRAeBRc",
-    panel: 1,
-    role: 'Member',
-    linkedin: "https://www.linkedin.com/in/jasmeet-bhatia-a17a77b"
-  },
-  {
     id: 6,
     name: "Dr. Sandeep Das",
     title: "Senior Vice-President",
@@ -666,16 +587,6 @@ const panelists: Panelist[] = [
     linkedin: "https://www.linkedin.com/in/arunkumardas"
   },
   {
-    id: 10,
-    name: "Sunita Rath",
-    title: "Chief People Officer",
-    company: "Bandhan Life",
-    image: "https://media.licdn.com/dms/image/v2/C5103AQEv9idr3tNvXw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1582294125320?e=1763596800&v=beta&t=maGHgVxBSpibUwvhA1MbnGwppWENe5qyrv3Xqbpq5F4",
-    panel: 2,
-    role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/sunita-rath-482732b"
-  },
-  {
     id: 11,
     name: "Swati Dogra",
     title: "Head – Human Resources, South Asia",
@@ -694,16 +605,6 @@ const panelists: Panelist[] = [
     panel: 2,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/padmajasingharya"
-  },
-  {
-    id: 13,
-    name: "Arpita Pamnani",
-    title: "Vice President Human Resource",
-    company: "Axis Bank",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHrJQgeszUgeg/profile-displayphoto-shrink_400_400/B4DZc0bKxFG8Ag-/0/1748931229589?e=1763596800&v=beta&t=7Pb4MF4nL1CtVhecCat4OzPkTh7fJGHqJ-5YvQOCRPg",
-    panel: 2,
-    role: 'Panel Member',
-    linkedin: "https://www.linkedin.com/in/arpita-pamnani-3999bba"
   },
   // Panel 3 Moderator
   {
