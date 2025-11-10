@@ -746,7 +746,9 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #112250 0%, #3B507D 100%)' }}>
+    <div className="min-h-screen" style={{
+      background: 'linear-gradient(135deg, rgba(17, 34, 80, 0.7) 0%, rgba(59, 80, 125, 0.7) 100%), url("/Untitled design-6.png") center/cover no-repeat fixed'
+    }}>
       {/* Navbar */}
       <Navbar activePage='home'/>
 
