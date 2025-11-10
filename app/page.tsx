@@ -90,7 +90,7 @@ const roundTableSessions: RoundTableSession[] = [
     name: "Stanley Monteiro",
     title: "Head – Talent Acquisition (Real Estate & Wholesale Finance)",
     company: "Piramal Enterprises Limited",
-    image: "https://media.licdn.com/dms/image/v2/D5603AQGWvJUOW8t-bQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1723528106599?e=1763596800&v=beta&t=cBdYrH_kE6kKurjQwy4efygdwDkKrUgkzXwFdTRECAc",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEnnuDpe2-tfQ/profile-displayphoto-scale_400_400/B4DZpilnN5IkAg-/0/1762590619318?e=1764201600&v=beta&t=anZ2kT5WLb6OKLBPnnqVroThg6st59J7r2ISo9_hL8A",
     roundTable: 1,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/stanleymonteiro/"
