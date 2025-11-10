@@ -23,20 +23,36 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <Image 
-                src="/logos/1.png" 
-                alt="HR Vista Logo" 
-                width={40}
-                height={40}
-                className="h-10 w-10 mr-3 object-contain"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                }}
-              />
-              <div className="w-10 h-10 rounded-lg mr-3 hidden items-center justify-center" style={{ backgroundColor: '#E0C58E' }}>
-                <span className="text-lg font-bold" style={{ color: '#112250' }}>HV</span>
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="flex items-center">
+                <Image 
+                  src="/logos/1.png" 
+                  alt="HR Vista Logo" 
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
+                <div className="w-10 h-10 rounded-lg hidden items-center justify-center" style={{ backgroundColor: '#E0C58E' }}>
+                  <span className="text-lg font-bold" style={{ color: '#112250' }}>HV</span>
+                </div>
+              </div>
+              <div className="h-8 w-px bg-gray-400 mx-2"></div>
+              <div className="flex items-center">
+                <Image 
+                  src="/logo-menu-3-2.png" 
+                  alt="Christ University Logo" 
+                  width={180}
+                  height={60}
+                  className="h-12 object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
               </div>
             </Link>
           </div>

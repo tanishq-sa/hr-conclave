@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaCalendarAlt, FaEnvelope } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaCalendarAlt, FaEnvelope, FaPhone, FaGlobe } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -9,24 +9,37 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-4">
-              <Image 
-                src="/logos/1.png" 
-                alt="HR Vista Logo" 
-                width={32}
-                height={32}
-                className="h-8 w-8 mr-3 object-contain"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                }}
-              />
-              <div className="w-8 h-8 rounded-lg mr-3 items-center justify-center hidden" style={{ backgroundColor: '#E0C58E' }}>
-                <span className="text-sm font-bold" style={{ color: '#112250' }}>HV</span>
+            <div className="flex flex-col space-y-4 mb-4">
+              <div className="flex items-center">
+                <Image 
+                  src="/logos/1.png" 
+                  alt="HR Vista Logo" 
+                  width={32}
+                  height={32}
+                  className="h-8 w-8 mr-3 object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                  }}
+                />
+                <h3 className="text-2xl font-bold mr-6" style={{ color: '#F5F0EA' }}>
+                  HR Vista 2.0
+                </h3>
+                <div className="h-8 w-px bg-gray-500"></div>
+                <div className="ml-6">
+                  <Image 
+                    src="/logo-menu-3-2.png" 
+                    alt="Christ University Logo" 
+                    width={180}
+                    height={48}
+                    className="h-12 object-contain"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </div>
               </div>
-              <h3 className="text-2xl font-bold" style={{ color: '#F5F0EA' }}>
-                HR Vista 2.0
-              </h3>
             </div>
             <p className="text-sm mb-6 max-w-md" style={{ color: '#D9CBC2' }}>
               Shaping the future of Human Resources through innovative strategies, 
@@ -80,6 +93,18 @@ export default function Footer() {
                 <FaEnvelope className="text-sm flex-shrink-0" style={{ color: '#E0C58E' }} />
                 <a href="mailto:hrvista.lavasa@christuniversity.in" className="text-sm hover:underline" style={{ color: '#D9CBC2' }}>
                   hrvista.lavasa@christuniversity.in
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaPhone className="text-sm flex-shrink-0" style={{ color: '#E0C58E' }} />
+                <a href="tel:18001232009" className="text-sm hover:underline" style={{ color: '#D9CBC2' }}>
+                  1800-123-2009
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaGlobe className="text-sm flex-shrink-0" style={{ color: '#E0C58E' }} />
+                <a href="https://lavasa.christuniversity.in" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: '#D9CBC2' }}>
+                  https://lavasa.christuniversity.in
                 </a>
               </div>
             </div>
