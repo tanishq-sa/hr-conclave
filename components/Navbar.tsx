@@ -43,38 +43,49 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
-              <Link 
-                href="/#panelists" 
-                className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'panelists' ? 'opacity-100' : 'opacity-80'}`} 
-                style={{ color: activePage === 'panelists' ? '#E0C58E' : '#D9CBC2' }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Panelists
-              </Link>
-              <Link 
-                href="/media" 
-                className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'media' ? 'opacity-100' : 'opacity-80'}`} 
-                style={{ color: activePage === 'media' ? '#E0C58E' : '#D9CBC2' }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Media
-              </Link>
-              <Link 
-                href="/contact" 
-                className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'contact' ? 'opacity-100' : 'opacity-80'}`} 
-                style={{ color: activePage === 'contact' ? '#E0C58E' : '#D9CBC2' }}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              <button 
-                className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105" 
-                style={{ backgroundColor: '#E0C58E', color: '#112250' }}
-                onClick={() => window.open('/HRPoster.pdf', '_blank')}
-              >
-                View Brochure
-              </button>
+            <div className="flex items-center">
+              <div className="flex items-center space-x-8 mr-8">
+                <Link 
+                  href="/#panelists" 
+                  className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'panelists' ? 'opacity-100' : 'opacity-80'}`} 
+                  style={{ color: activePage === 'panelists' ? '#E0C58E' : '#D9CBC2' }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Panelists
+                </Link>
+                <Link 
+                  href="/media" 
+                  className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'media' ? 'opacity-100' : 'opacity-80'}`} 
+                  style={{ color: activePage === 'media' ? '#E0C58E' : '#D9CBC2' }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Media
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'contact' ? 'opacity-100' : 'opacity-80'}`} 
+                  style={{ color: activePage === 'contact' ? '#E0C58E' : '#D9CBC2' }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </div>
+              <div className="flex items-center space-x-3">
+                <button 
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 whitespace-nowrap" 
+                  style={{ backgroundColor: '#E0C58E', color: '#112250' }}
+                  onClick={() => window.open('/HRPoster.pdf', '_blank')}
+                >
+                  View Brochure
+                </button>
+                <button 
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 whitespace-nowrap" 
+                  style={{ backgroundColor: '#E0C58E', color: '#112250' }}
+                  onClick={() => window.open('/HRPoster1.pdf', '_blank')}
+                >
+                  View Itinerary
+                </button>
+              </div>
             </div>
           </div>
 
@@ -132,11 +143,18 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 Contact
               </Link>
               <button 
-                className="px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105" 
+                className="px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105 w-full mb-2" 
                 style={{ backgroundColor: '#E0C58E', color: '#112250' }}
                 onClick={() => { window.open('/HRPoster.pdf', '_blank'); setIsMobileMenuOpen(false); }}
               >
                 View Brochure
+              </button>
+              <button 
+                className="px-3 py-2 rounded-full text-xs font-medium transition-all duration-300 hover:scale-105 w-full" 
+                style={{ backgroundColor: '#E0C58E', color: '#112250' }}
+                onClick={() => { window.open('/itinerary.pdf', '_blank'); setIsMobileMenuOpen(false); }}
+              >
+                Download Itinerary
               </button>
             </div>
           </div>

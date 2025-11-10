@@ -833,11 +833,11 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* CTA Button */}
-              <div className="flex justify-center pt-8">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center gap-4 pt-8">
                 <button 
                   onClick={() => window.open('/HRPoster.pdf', '_blank')} 
-                  className="px-8 py-3 border-2 font-semibold rounded-full transition-all duration-300 hover:scale-105 flex items-center space-x-2" 
+                  className="px-8 py-3 border-2 font-semibold rounded-full transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2" 
                   style={{ 
                     borderColor: '#E0C58E', 
                     color: '#F5F0EA',
@@ -846,6 +846,21 @@ export default function Home() {
                   }}
                 >
                   <span>View Brochure</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                </button>
+                <button 
+                  onClick={() => window.open('/HRPoster1.pdf', '_blank')} 
+                  className="px-8 py-3 border-2 font-semibold rounded-full transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2" 
+                  style={{ 
+                    borderColor: '#E0C58E', 
+                    color: '#F5F0EA',
+                    backgroundColor: 'rgba(224, 197, 142, 0.1)',
+                    backdropFilter: 'blur(8px)'
+                  }}
+                >
+                  <span>Download Itinerary</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
