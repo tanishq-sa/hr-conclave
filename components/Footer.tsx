@@ -56,11 +56,11 @@ export default function Footer() {
               <li><a href="/media" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Media</a></li>
               <li><a href="/contact" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Contact Us</a></li>
               <li><a href="/HRPoster.pdf" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>View Brochure</a></li>
-              <li><a href="/HRPoster1.pdf" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Download Itinerary</a></li>
+              <li><a href="/HRPoster1.pdf" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>View Itinerary</a></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info */}  
           <div>
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
