@@ -14,6 +14,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
 
   const navLinks = [
     { name: 'Panelists', href: '/#panelists' },
+    { name: 'Partners', href: '/partners' },
     { name: 'Media', href: '/media' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -68,6 +69,14 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Panelists
+                </Link>
+                <Link 
+                  href="/partners" 
+                  className={`text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'partners' ? 'opacity-100' : 'opacity-80'}`} 
+                  style={{ color: activePage === 'partners' ? '#E0C58E' : '#D9CBC2' }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Partners
                 </Link>
                 <Link 
                   href="/media" 

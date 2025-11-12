@@ -66,6 +66,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               <li><a href="/#panelists" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Panelists</a></li>
+              <li><a href="/partners" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Partners</a></li>
               <li><a href="/media" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Media</a></li>
               <li><a href="/contact" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>Contact Us</a></li>
               <li><a href="/HRPoster.pdf" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors duration-300 hover:opacity-80" style={{ color: '#D9CBC2' }}>View Brochure</a></li>
