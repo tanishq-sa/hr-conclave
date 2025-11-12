@@ -152,6 +152,14 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 Panelists
               </Link>
               <Link 
+                href="/partners" 
+                className={`block text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'partners' ? 'opacity-100' : 'opacity-80'}`} 
+                style={{ color: activePage === 'partners' ? '#E0C58E' : '#D9CBC2' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Partners
+              </Link>
+              <Link 
                 href="/media" 
                 className={`block text-sm font-medium transition-colors duration-300 hover:opacity-80 ${activePage === 'media' ? 'opacity-100' : 'opacity-80'}`} 
                 style={{ color: activePage === 'media' ? '#E0C58E' : '#D9CBC2' }}
