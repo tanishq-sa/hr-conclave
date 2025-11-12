@@ -894,7 +894,7 @@ export default function Home() {
                 1: 'Reimagining Work Architecture: Skills, Roles & AI Integration',
                 2: 'HR Analytics & Decision Intelligence: From Data to Strategic Impact',
                 3: 'Human-Centric Leadership in the Age of AI',
-                4: 'TBD',
+                4: 'Human-Centered Leadership in a Post-AI World: Embracing Empathy, Creativity, and Purpose',
               };
               const panelGroup = panelists.filter(p => p.panel === panelNumber);
               const moderators = panelGroup.filter(p => p.role.toLowerCase() === 'moderator');
