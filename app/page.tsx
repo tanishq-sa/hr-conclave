@@ -469,16 +469,16 @@ const firesideChatGuests: FiresideChatGuest[] = [
     name: "Sudhir Mateti",
     title: "CHRO",
     company: "Arvind Limited",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    linkedin: ""
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEqOPy2O3Lbog/profile-displayphoto-scale_400_400/B56Zj1CRMTHIAk-/0/1756457670837?e=1764806400&v=beta&t=OQ9WNUYFEtVQPvxcdkcFnZSjGgszcxcSdv3wXGLG52A",
+    linkedin: "https://www.linkedin.com/in/sudhirmateti/"
   },
   {
     id: 2,
     name: "Balasubramanian Sethuraman",
     title: "Head HR",
     company: "Parekh Integrated Services Pvt. Ltd.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    linkedin: ""
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGsjtad0SSsIg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724664750297?e=1764806400&v=beta&t=D3g5Z_A6UOeFwsRSBA0OFstKrKyvyp-Dsw-O5r6Ctl4",
+    linkedin: "https://www.linkedin.com/in/bala-s"
   }
 ];
 
