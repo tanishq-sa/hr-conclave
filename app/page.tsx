@@ -86,15 +86,6 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     role: 'Panel Member'
   },
   {
-    id: 4,
-    name: "Parth Kulkarni",
-    title: "Vice President – Human Resources (Manufacturing)",
-    company: "Schindler India",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    roundTable: 1,
-    role: 'Panel Member'
-  },
-  {
     id: 5,
     name: "Neha Verma",
     title: "AGM - HR",
@@ -106,12 +97,11 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
   {
     id: 6,
     name: "Pooja Amravanshi",
-    title: "GCC HR Leader",
-    company: "",
+    title: "Senior Manager – HR Business Partner",
+    company: "Company 3 Method India",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     roundTable: 1,
-    role: 'Panel Member',
-    note: "Not to mention company name or title in communications"
+    role: 'Panel Member'
   },
   {
     id: 7,
@@ -123,19 +113,28 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     role: 'Panel Member'
   },
   {
-    id: 8,
-    name: "Chirag Trivedi",
-    title: "Sr. General Manager - HR",
-    company: "VFS Global",
+    id: 9,
+    name: "Krishan Kumar",
+    title: "Head HR",
+    company: "PXIL",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     roundTable: 1,
     role: 'Panel Member'
   },
   {
-    id: 9,
-    name: "Krishan Kumar",
+    id: 21,
+    name: "Arundhati Katdare",
     title: "Head HR",
-    company: "PXIL",
+    company: "",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Panel Member'
+  },
+  {
+    id: 22,
+    name: "Ankita Gupta",
+    title: "Talent Acquisition and Risk Management",
+    company: "Wipro",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     roundTable: 1,
     role: 'Panel Member'
@@ -221,7 +220,25 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     company: "Axis Max Life Insurance",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     roundTable: 2,
-    role: 'Panel Member',
+    role: 'Panel Member'
+  },
+  {
+    id: 19,
+    name: "Ashwin S Jaisinghani",
+    title: "AVP - People Success",
+    company: "Searce INC",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 2,
+    role: 'Panel Member'
+  },
+  {
+    id: 20,
+    name: "Sumeet Pattnaik",
+    title: "Head HR BP",
+    company: "Premium Group",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 2,
+    role: 'Panel Member'
   }
 ];
 
@@ -276,6 +293,15 @@ const panelists: Panelist[] = [
     panel: 1,
     role: 'Panel Member'
   },
+  {
+    id: 20,
+    name: "Prachee Sonchal",
+    title: "Head HR",
+    company: "Burckhardt Compression",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 1,
+    role: 'Panel Member'
+  },
   // Panel 2 - Moderator
   {
     id: 7,
@@ -318,31 +344,40 @@ const panelists: Panelist[] = [
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/sandeepdas1980"
   },
+  {
+    id: 21,
+    name: "Vaibhav Goel",
+    title: "Head - HR",
+    company: "Reliance Industries",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 2,
+    role: 'Panel Member'
+  },
   // Panel 3 - Members
   {
     id: 11,
+    name: "Dr. Brillian S.K.",
+    title: "Executive Vice President & Chief People Officer",
+    company: "TimesPro",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 3,
+    role: 'Moderator'
+  },
+  {
+    id: 12,
     name: "Dr. Subhash Mali",
     title: "Chief People Officer",
     company: "H.K. Designs (Hari Krishna Group)",
     image: "https://media.licdn.com/dms/image/v2/C4D03AQHPhDKxnswVwA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659181227456?e=1764201600&v=beta&t=O3Z3aZYrgbGpNXh6yaa-2yWx_uGVekd8bQCwuAk-GnY",
     panel: 3,
-    role: 'Moderator',
+    role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/dr-subhash-mali-56b690a"
   },
   {
-    id: 12,
+    id: 13,
     name: "Gaurav Bhalla",
     title: "Head- Global HR Shared Services",
     company: "Sodexo",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    panel: 3,
-    role: 'Panel Member'
-  },
-  {
-    id: 13,
-    name: "Rupali Mahadik",
-    title: "Global - Employee Experience Program Manager",
-    company: "QAD",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     panel: 3,
     role: 'Panel Member'
@@ -356,17 +391,6 @@ const panelists: Panelist[] = [
     panel: 3,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/preeti-ahuja-21235567"
-  },
-  {
-    id: 15,
-    name: "Anupama Pillai",
-    title: "Global Talent Acquisition & Country HR Head",
-    company: "HCLSoftware",
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQE9SHj6zkQxnw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617707836051?e=1763596800&v=beta&t=2yMnp4ABnE55WvA9dp-YjS_fCr4lqLleTUvg-vNaS1E",
-    panel: 3,
-    role: 'Panel Member',
-    note: "Will be there for one day",
-    linkedin: "https://www.linkedin.com/in/anupama-pillai-94a8641a"
   },
   // Panel 4 - Moderator
   {
@@ -427,6 +451,35 @@ const christLeaders: ChristLeader[] = [
     image: "https://media.licdn.com/dms/image/v2/C5603AQG-wbh-okkhLw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1644668499646?e=1763596800&v=beta&t=tkwRAJ4vs200sH5LIxf4srJAzxzCWMIDrMwS2_2pZvw",
     linkedin: "https://www.linkedin.com/in/justin-p-varghese-2661351a3/"
   },
+];
+
+interface FiresideChatGuest {
+  id: number;
+  name: string;
+  title: string;
+  company: string;
+  image: string;
+  linkedin?: string;
+  role?: string;
+}
+
+const firesideChatGuests: FiresideChatGuest[] = [
+  {
+    id: 1,
+    name: "Sudhir Mateti",
+    title: "CHRO",
+    company: "Arvind Limited",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    linkedin: ""
+  },
+  {
+    id: 2,
+    name: "Balasubramanian Sethuraman",
+    title: "Head HR",
+    company: "Parekh Integrated Services Pvt. Ltd.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    linkedin: ""
+  }
 ];
 
 const chiefGuests: ChiefGuest[] = [
@@ -755,6 +808,68 @@ export default function Home() {
                     </p>
                     <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
                       {christLeader.company}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Fireside Chat Section */}
+        <section id="fireside-chat" className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F5F0EA' }}>
+                FIRESIDE CHAT
+              </h2>
+              <p className="text-xl text-[#E0C58E] max-w-3xl mx-auto mb-8">
+              </p>
+            </div>
+            <div className={`grid ${getGridClass(firesideChatGuests.length)} gap-8 justify-items-center max-w-5xl mx-auto`}>
+              {firesideChatGuests.map((guest, index) => (
+                <div 
+                  key={guest.id} 
+                  className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
+                  style={{ 
+                    backgroundColor: '#F5F0EA20', 
+                    borderColor: '#E0C58E40',
+                    animationDelay: `${index * 100}ms` 
+                  }}
+                >
+                  <div className="text-center">
+                    <div className="relative mb-6">
+                      <img 
+                        src={guest.image}
+                        alt={guest.name}
+                        className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                      />
+                      {guest.role && (
+                        <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full text-xs font-medium" 
+                          style={{ backgroundColor: 'rgba(224, 197, 142, 0.2)', color: '#E0C58E' }}>
+                          {guest.role}
+                        </span>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
+                      {guest.name}
+                      {guest.linkedin && (
+                        <a 
+                          href={guest.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-[#E0C58E] transition-colors"
+                        >
+                          <FaLinkedin size={16} />
+                        </a>
+                      )}
+                    </h3>
+                    <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
+                      {guest.title}
+                    </p>
+                    <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
+                      {guest.company}
                     </p>
                   </div>
                 </div>
