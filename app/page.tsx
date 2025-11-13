@@ -139,6 +139,33 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     roundTable: 1,
     role: 'Panel Member'
   },
+  {
+    id: 23,
+    name: "Atin Karmokar",
+    title: "Sr. VP - Head Human Resources & Admin",
+    company: "Pentagon System & Services Pvt. Ltd.",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Panel Member'
+  },
+  {
+    id: 24,
+    name: "Amit Kakar",
+    title: "VP HR",
+    company: "GSL Ltd",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Panel Member'
+  },
+  {
+    id: 25,
+    name: "Davinder Kaur",
+    title: "Vice President People and Culture",
+    company: "Team Rustic Pvt. Ltd.",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 1,
+    role: 'Panel Member'
+  },
   // Round Table 2
   {
     id: 10,
@@ -154,15 +181,6 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Dhwani Patel",
     title: "Human Resources Manager",
     company: "ExSyn Corp",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    roundTable: 2,
-    role: 'Panel Member'
-  },
-  {
-    id: 12,
-    name: "Debansh Roy",
-    title: "Head of People | Board Member",
-    company: "AllianceBernstein",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     roundTable: 2,
     role: 'Panel Member'
@@ -206,6 +224,33 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
   },
   {
     id: 17,
+    name: "Nikhil Bhojwani",
+    title: "Head - Learning & Development",
+    company: "Mumbai Metro One Pvt Ltd",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 2,
+    role: 'Panel Member'
+  },
+  {
+    id: 18,
+    name: "Sujeet Patil",
+    title: "People Partner",
+    company: "Smollan",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 2,
+    role: 'Panel Member'
+  },
+  {
+    id: 19,
+    name: "Senthil Kumar S",
+    title: "Associate Vice President - Human Resources",
+    company: "HDFC Life Insurance Company Limited",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    roundTable: 2,
+    role: 'Panel Member'
+  },
+  {
+    id: 20,
     name: "Madhuri Chhatbar",
     title: "People & Capability Manager - India",
     company: "adm Indicia",
@@ -214,7 +259,7 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     role: 'Panel Member'
   },
   {
-    id: 18,
+    id: 21,
     name: "Gurvinder Kumar",
     title: "Assistant Vice President - Human Resource",
     company: "Axis Max Life Insurance",
@@ -223,7 +268,7 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     role: 'Panel Member'
   },
   {
-    id: 19,
+    id: 22,
     name: "Ashwin S Jaisinghani",
     title: "AVP - People Success",
     company: "Searce INC",
@@ -232,7 +277,7 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     role: 'Panel Member'
   },
   {
-    id: 20,
+    id: 23,
     name: "Sumeet Pattnaik",
     title: "Head HR BP",
     company: "Premium Group",
@@ -293,15 +338,6 @@ const panelists: Panelist[] = [
     panel: 1,
     role: 'Panel Member'
   },
-  {
-    id: 20,
-    name: "Prachee Sonchal",
-    title: "Head HR",
-    company: "Burckhardt Compression",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    panel: 1,
-    role: 'Panel Member'
-  },
   // Panel 2 - Moderator
   {
     id: 7,
@@ -312,6 +348,16 @@ const panelists: Panelist[] = [
     panel: 2,
     role: 'Moderator',
     linkedin: "https://www.linkedin.com/in/arunkumardas"
+  },
+
+  {
+    id: 30,
+    name: "Bobby Kuriakose",
+    title: "Director - HR",
+    company: "Forbes Marshall",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 3,
+    role: 'Panel Member'
   },
   // Panel 2 - Members
   {
@@ -431,6 +477,24 @@ const panelists: Panelist[] = [
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     panel: 4,
     role: 'Panel Member'
+  },
+  {
+    id: 20,
+    name: "Anand Dhruv",
+    title: "Fractional Chief HR Officer",
+    company: "RackBank Datacenter",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 4,
+    role: 'Panel Member'
+  },
+  {
+    id: 21,
+    name: "Kishor Kenche",
+    title: "CHRO",
+    company: "Gold Plus Glass Industry",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 4,
+    role: 'Panel Member'
   }
 ];
 
@@ -499,6 +563,14 @@ const chiefGuests: ChiefGuest[] = [
     image: "https://media.licdn.com/dms/image/v2/D4D03AQESZgdo6UjLgQ/profile-displayphoto-scale_400_400/B4DZd9tKBBGsAg-/0/1750160681231?e=1763596800&v=beta&t=ZAvWYCOi-7nfPwblhzuawPm7dlOccmHpb3PTp7yeHUA",
     linkedin: "https://www.linkedin.com/in/rchanakyapillai"
   },
+  {
+    id: 3,
+    name: "Arshad Fakhri",
+    title: "President",
+    company: "PROSE Technologies India",
+    image: "https://i.ibb.co/mCtJ9LKM/Whats-App-Image-2025-11-13-at-8-14-22-PM.jpg",
+    linkedin: "https://www.linkedin.com/in/arshad-fakhri-ba713722/"
+  }
 ];
 const speakers: Speaker[] = [
   {
