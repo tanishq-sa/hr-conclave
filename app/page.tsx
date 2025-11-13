@@ -562,9 +562,21 @@ const chiefGuests: ChiefGuest[] = [
     company: "Chanakya International Institute of Leadership Studies, University of Mumbai",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQESZgdo6UjLgQ/profile-displayphoto-scale_400_400/B4DZd9tKBBGsAg-/0/1750160681231?e=1763596800&v=beta&t=ZAvWYCOi-7nfPwblhzuawPm7dlOccmHpb3PTp7yeHUA",
     linkedin: "https://www.linkedin.com/in/rchanakyapillai"
-  },
+  }
+];
+
+interface GuestOfHonor {
+  id: number;
+  name: string;
+  title: string;
+  company: string;
+  image: string;
+  linkedin?: string;
+}
+
+const guestsOfHonor: GuestOfHonor[] = [
   {
-    id: 3,
+    id: 1,
     name: "Arshad Fakhri",
     title: "President",
     company: "PROSE Technologies India",
@@ -572,6 +584,7 @@ const chiefGuests: ChiefGuest[] = [
     linkedin: "https://www.linkedin.com/in/arshad-fakhri-ba713722/"
   }
 ];
+
 const speakers: Speaker[] = [
   {
     id: 1,
@@ -786,31 +799,32 @@ export default function Home() {
             <div
               className={`grid ${getGridClass(chiefGuests.length)} gap-8 justify-items-center max-w-5xl mx-auto`}
             >
-              {chiefGuests.map((chiefGuest, index) => (
-                <div 
-                  key={chiefGuest.id} 
-                  className="w-[340px] max-w-full group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
-                  style={{ 
-                    backgroundColor: '#F5F0EA20', 
+              {chiefGuests.map((guest) => (
+                <div
+                  key={guest.id}
+                  className="w-full max-w-xs group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
+                  style={{
+                    backgroundColor: '#F5F0EA20',
                     borderColor: '#E0C58E40',
-                    animationDelay: `${index * 100}ms` 
+                    minHeight: '350px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center'
                   }}
                 >
                   <div className="text-center">
-                    {/* Speaker Photo */}
                     <div className="relative mb-6">
-                      <img 
-                        src={chiefGuest.image}
-                        alt={chiefGuest.name}
-                        className="w-24 h-24 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                      <img
+                        src={guest.image}
+                        alt={guest.name}
+                        className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
                       />
                     </div>
-                    
                     <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
-                      {chiefGuest.name}
-                      {chiefGuest.linkedin && (
+                      {guest.name}
+                      {guest.linkedin && (
                         <a 
-                          href={chiefGuest.linkedin} 
+                          href={guest.linkedin} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="hover:text-[#E0C58E] transition-colors"
@@ -820,10 +834,10 @@ export default function Home() {
                       )}
                     </h3>
                     <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
-                      {chiefGuest.title}
+                      {guest.title}
                     </p>
                     <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
-                      {chiefGuest.company}
+                      {guest.company}
                     </p>
                   </div>
                 </div>
@@ -832,7 +846,66 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="christ-leadership" className="py-20">
+        <section id="guest-of-honor" className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F5F0EA' }}>
+                GUEST OF HONOR
+              </h2>
+            </div>
+            <div 
+              className={`grid ${getGridClass(guestsOfHonor.length)} gap-8 justify-items-center max-w-5xl mx-auto`}
+            >
+              {guestsOfHonor.map((guest) => (
+                <div
+                  key={guest.id}
+                  className="w-full max-w-xs group relative backdrop-blur-sm rounded-2xl p-8 transition-all duration-500 transform hover:scale-105 border"
+                  style={{
+                    backgroundColor: '#F5F0EA20',
+                    borderColor: '#E0C58E40',
+                    minHeight: '350px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center'
+                  }}
+                >
+                  <div className="text-center">
+                    {/* Speaker Photo */}
+                    <div className="relative mb-6">
+                      <img 
+                        src={guest.image}
+                        alt={guest.name}
+                        className="w-32 h-32 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                      />
+                    </div>
+                    
+                    <h3 className="text-xl font-bold mb-2 transition-colors duration-300 flex items-center justify-center gap-2" style={{ color: '#F5F0EA' }}>
+                      {guest.name}
+                      {guest.linkedin && (
+                        <a 
+                          href={guest.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-[#E0C58E] transition-colors"
+                        >
+                          <FaLinkedin size={16} />
+                        </a>
+                      )}
+                    </h3>
+                    <p className="text-sm font-semibold mb-1" style={{ color: '#E0C58E' }}>
+                      {guest.title}
+                    </p>
+                    <p className="text-sm mb-4" style={{ color: '#D9CBC2', opacity: 0.8 }}>
+                      {guest.company}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="christ-leadership" className="">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#F5F0EA' }}>
