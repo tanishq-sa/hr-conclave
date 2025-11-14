@@ -299,17 +299,6 @@ const panelists: Panelist[] = [
     linkedin: "https://www.linkedin.com/in/abhijitpuri"
   },
   {
-    id: 3,
-    name: "Moushumi Dhar",
-    title: "Chief Human Resources Officer",
-    company: "IndoSpace",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    panel: 1,
-    role: 'Panel Member',
-    note: "Will attend on Saturday only and will leave same day",
-    linkedin: "https://www.linkedin.com/in/moushumi-dhar-0662051"
-  },
-  {
     id: 4,
     name: "Hitesh Kambli",
     title: "Head – Human Resources",
@@ -408,15 +397,6 @@ const panelists: Panelist[] = [
     panel: 3,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/dr-subhash-mali-56b690a"
-  },
-  {
-    id: 13,
-    name: "Gaurav Bhalla",
-    title: "Head- Global HR Shared Services",
-    company: "Sodexo",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    panel: 3,
-    role: 'Panel Member'
   },
   {
     id: 14,
