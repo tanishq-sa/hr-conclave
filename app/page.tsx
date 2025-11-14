@@ -396,7 +396,7 @@ const panelists: Panelist[] = [
     name: "Vaibhav Goel",
     title: "Head - HR",
     company: "Reliance Industries",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQHu1g7Tm7NzOw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1613752969626?e=1764806400&v=beta&t=pVJiLT2n1Tbn6VWe6SOCtSAp4iSsicYsWwB8no3khmE",
     panel: 2,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/vaibhav-goel-bb21838/"
