@@ -62,55 +62,61 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Ramanuj Choubey",
     title: "Associate Director – Global HRBP & Capability Development",
     company: "Tata Communications Transformation Services",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C5103AQHJcnPB7SWGiQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1578994281509?e=1764806400&v=beta&t=E6gkVMWk-Ic0bK-7ATDoaZSkjp2fA8wVN123ssqs0Ok",
     roundTable: 1,
-    role: 'Moderator'
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/ramanuj-choubey-634a9b8/"
   },
   {
     id: 2,
     name: "Kirti Patkar",
     title: "Sr AGM – HR (Head L&D & HR Tech)",
     company: "APAR Industries Limited",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQHzGin6Na_HpA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1604690453664?e=1764806400&v=beta&t=aXKqNsIS4YW9qvqoFivjxditG_B_SPQFiorei9A1va4",
     roundTable: 1,
     role: 'Panel Member',
-    note: "Daughter also coming"
+    note: "Daughter also coming",
+    linkedin: "https://www.linkedin.com/in/kirti-patkar-31105555/"
   },
   {
     id: 3,
     name: "Stanley Monteiro",
     title: "Head – Talent Acquisition (Real Estate & Wholesale Finance)",
     company: "Piramal Enterprises Limited",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQE9EhNNwGtKOw/profile-displayphoto-scale_200_200/B4DZp2bfBxGsAc-/0/1762923509291?e=1764806400&v=beta&t=2qnzXd-SDI8hF_KocmNEex5KpwtzwN1ouH4TYeKpi6E",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/stanleymonteiro/"
   },
   {
     id: 5,
     name: "Neha Verma",
     title: "AGM - HR",
     company: "Aeries",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGdsNmkm1wHxQ/profile-displayphoto-scale_200_200/B4DZouUUz6IgAc-/0/1761713689440?e=1764806400&v=beta&t=mOqjWSPAZ-XZpjXBSQgr0FGs5V3RNQgIFmklm1j6Wds",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/-neha-verma/"
   },
   {
     id: 6,
     name: "Pooja Amravanshi",
-    title: "Senior Manager – HR Business Partner",
-    company: "Company 3 Method India",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    title: "Senior Manager",
+    company: "GCC Leader",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFsLT5QBHw6tw/profile-displayphoto-shrink_200_200/B4DZPVfNGvGoAc-/0/1734453548361?e=1764806400&v=beta&t=AqreLZtW-xR_8wQ_1fi8E_0pEXDY99bswpGHXMO0F4w",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/poojaamravanshi1512/"
   },
   {
     id: 7,
     name: "Anshuman Das",
     title: "AVP HR Business Partner (Wholesale Finance)",
     company: "Piramal Finance Limited",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQEvI_lw-_dCPw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1620815306768?e=1764806400&v=beta&t=hrorNByqxwfD5wvkBv-RR8cDkCnP2QwEvt2qkNjUVbc",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/anshuman-das-441baa80/"
   },
   {
     id: 9,
@@ -126,27 +132,30 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Arundhati Katdare",
     title: "Head HR",
     company: "",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQG8tTziGcxCSg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1674129763082?e=1764806400&v=beta&t=xFd1SskOQItbhIQO_podqf7vizzL_GSQFdh-2f-bSIw",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/arundhati-katdare-5bb01974/"
   },
   {
     id: 22,
     name: "Ankita Gupta",
     title: "Talent Acquisition and Risk Management",
     company: "Wipro",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C5603AQFGRT5RVMkZag/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1654712433385?e=1764806400&v=beta&t=DtNGlFmssDgZ-jKQAWzaFXg7-_xAliD-IFMz8_TZvO0",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/ankitaguptacapgemini/"
   },
   {
     id: 23,
     name: "Atin Karmokar",
     title: "Sr. VP - Head Human Resources & Admin",
     company: "Pentagon System & Services Pvt. Ltd.",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEZVL5x19ex4A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1681928127749?e=1764806400&v=beta&t=y2A3ws0PUlcj6bkZ0WhW5E23NujUfu-n5cFOvbOHgkM",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/atinkarmokar-hr/"
   },
   {
     id: 24,
@@ -162,9 +171,10 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Davinder Kaur",
     title: "Vice President People and Culture",
     company: "Team Rustic Pvt. Ltd.",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHjqvjff3qM8w/profile-displayphoto-scale_200_200/B4DZlHP3QbJIAY-/0/1757836982042?e=1764806400&v=beta&t=4dDrj6wmlKh56J9t0HnOVp3oRskcP_yZ5SB7K2pcvxg",
     roundTable: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/davinder-kaur-9b26387/"
   },
   // Round Table 2
   {
@@ -172,27 +182,30 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Balasubramanian Sethuraman",
     title: "Head HR",
     company: "Parekh Integrated Services Pvt. Ltd.",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGsjtad0SSsIg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724664750297?e=1764806400&v=beta&t=tTsKYVpUIpndoVhC9bmnc9-j7anih5sTEyl4zaO14iQ",
     roundTable: 2,
-    role: 'Moderator'
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/bala-s/"
   },
   {
     id: 11,
     name: "Dhwani Patel",
     title: "Human Resources Manager",
     company: "ExSyn Corp",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQF5rpUJpitW7g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1668499596106?e=1764806400&v=beta&t=EC2meVE0HrnSbb6TKTA5prYm2_-E8vBan0lfWYtNfH8",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/dhwani-patel-26a1b1257/"
   },
   {
     id: 13,
     name: "Varada Gupta",
     title: "Senior HR Manager",
     company: "Entytle",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHuGMAeEKZ5jA/profile-displayphoto-scale_200_200/B56Zhur4fIHMAg-/0/1754203655932?e=1764806400&v=beta&t=aBO8G7-Mx4Kr76yq5_kxMQyYaCEU1jEJaxkHtOuDeBs",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/varada-gupta-1bb5a410/"
   },
   {
     id: 14,
@@ -208,28 +221,31 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Rajalakshmi Ranganathan",
     title: "AVP HR",
     company: "Link Intime India",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C5103AQHRjkN9z9ILXQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1526105574341?e=1764806400&v=beta&t=uTR9x7EPDMj2-iJpVqiNaiDWBMIL1_dEOIWaBSyfT9w",
     roundTable: 2,
     role: 'Panel Member',
-    note: "Non-alcoholic, pure veg - to be paired with Gurvinder Kumar"
+    note: "Non-alcoholic, pure veg - to be paired with Gurvinder Kumar",
+    linkedin: "https://www.linkedin.com/in/rajalakshmi-ranganathan-b3774924/"
   },
   {
     id: 16,
     name: "Pratixha Narkar",
     title: "Vice President HR",
     company: "Nomura",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFYQP4P1wbdPA/profile-displayphoto-shrink_200_200/B4DZObnxO6HcAY-/0/1733482716774?e=1764806400&v=beta&t=RCDZDPfhfJV0_qabnzDcGpl9ZGsvUokjkccjbITHc2A",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/pratixha/"
   },
   {
     id: 17,
     name: "Nikhil Bhojwani",
     title: "Head - Learning & Development",
     company: "Mumbai Metro One Pvt Ltd",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGIG4StCI30BQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1728004299544?e=1764806400&v=beta&t=T_mNvtwVRq6qPcjY-vnvr5rtvZqOzsstuAQAakmseTo",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/nikhil-bhojwani-b5874b13/"
   },
   {
     id: 18,
@@ -245,45 +261,50 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Senthil Kumar S",
     title: "Associate Vice President - Human Resources",
     company: "HDFC Life Insurance Company Limited",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQFpPMnqtm-P0Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1596017508793?e=1764806400&v=beta&t=JC4_v-z_Op36Fp0iNEJLI4P_9V1QEuQ4Pf-HGtUgKMc",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/senthil-kumar-s-90754110/"
   },
   {
     id: 20,
     name: "Madhuri Chhatbar",
     title: "People & Capability Manager - India",
     company: "adm Indicia",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFx-ta1osxLlg/profile-displayphoto-scale_200_200/B4DZhe9D7uGgAY-/0/1753939726017?e=1764806400&v=beta&t=u6M6Eq2mhAi4AK4lQcPABCuKix4wi8BMSu2U2WmCaNo",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/madhuri-chhatbar-11497271/"
   },
   {
     id: 21,
     name: "Gurvinder Kumar",
     title: "Assistant Vice President - Human Resource",
     company: "Axis Max Life Insurance",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHmDTxezJC5QA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1725479853786?e=1764806400&v=beta&t=5cC7Cni5dZAdHrAoCMOI1lrfzqxTKfaiPs7jYl89-Z4",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/gurvinder-kumar-33bb1a1b/"
   },
   {
-    id: 22,
+    id: 29,
     name: "Ashwin S Jaisinghani",
     title: "AVP - People Success",
     company: "Searce INC",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQFYxpGP0jNmxw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1602137923278?e=1764806400&v=beta&t=Tjgt92tJov_3nMYfxFpPKLahGBDBny8bMb4vbhbVl74",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/ashwinsjaisinghani/"
   },
   {
     id: 23,
     name: "Sumeet Pattnaik",
     title: "Head HR BP",
     company: "Premium Group",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEibikCl2lh0Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1683642168447?e=1764806400&v=beta&t=pVIq6mGPgGetHOaNGx0L8CRW5HeUAr7JuK49X9uaoVw",
     roundTable: 2,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/sumeetpattnaik/"
   }
 ];
 
@@ -325,7 +346,8 @@ const panelists: Panelist[] = [
     company: "Harbinger Group",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     panel: 1,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rubybaksi/"
   },
   // Panel 2 - Moderator
   {
@@ -376,6 +398,16 @@ const panelists: Panelist[] = [
     company: "Reliance Industries",
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     panel: 2,
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/vaibhav-goel-bb21838/"
+  },
+  {
+    id: 6,
+    name: "Ujjal Sengupta",
+    title: "General Manager",
+    company: "Reliance Jio",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 2,
     role: 'Panel Member'
   },
   // Panel 3 - Members
@@ -384,9 +416,10 @@ const panelists: Panelist[] = [
     name: "Dr. Brillian S.K.",
     title: "Executive Vice President & Chief People Officer",
     company: "TimesPro",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQH6xe65KMt1zQ/profile-displayphoto-scale_200_200/B56ZnMeoVKKEAY-/0/1760072206430?e=1764806400&v=beta&t=o-PiEL4FJ4bXSSlryBh3euLLW5x4AmA_Vd5p56lC8Dc",
     panel: 3,
-    role: 'Moderator'
+    role: 'Moderator',
+    linkedin: "https://www.linkedin.com/in/brillian/"
   },
   {
     id: 12,
@@ -426,9 +459,10 @@ const panelists: Panelist[] = [
     name: "Rohit Kalamkar",
     title: "Director - HR",
     company: "SA Technologies",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEton91JIg5kA/profile-displayphoto-shrink_200_200/B4DZOGSlsRHoAY-/0/1733124841682?e=1764806400&v=beta&t=B9BLxFPv-QYjWhOFcVby-xHA4y4saKQ5QK3sHcaBozU",
     panel: 4,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rohitkalamkar/"
   },
   {
     id: 18,
@@ -444,36 +478,40 @@ const panelists: Panelist[] = [
     name: "Rupesh Panabur",
     title: "HRBP & ER : Head HR",
     company: "Schaeffler group",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHnyUnI6K0SQw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1716394274481?e=1764806400&v=beta&t=Rhs2tsJDJudFodGyLzUWJDrU8NHRijGfxsUqno2GFtI",
     panel: 4,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/rupeshpanambur/"
   },
   {
     id: 20,
     name: "Anand Dhruv",
     title: "Fractional Chief HR Officer",
     company: "RackBank Datacenter",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGNV0uUrwTT1g/profile-displayphoto-shrink_200_200/B4DZdOfbgbGYAc-/0/1749368553330?e=1764806400&v=beta&t=6YtYBKe6m7gfHXr4SCk3hrH7-leH-BmNfP8pXL3DvsI",
     panel: 4,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/coachdhruvanand/"
   },
   {
     id: 21,
     name: "Kishor Kenche",
     title: "CHRO",
     company: "Gold Plus Glass Industry",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/C4E03AQHYicgKhnYA5w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1608797127447?e=1764806400&v=beta&t=4xRGSV3dFOisSiQuCUiN7xkpBy169lNWvbSTNrnc8dQ",
     panel: 4,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/kishor-kenche-00637514/"
   },
   {
-    id: 22,
+    id: 30,
     name: "Mahesh Gunjal",
     title: "CHRO",
     company: "Circulants Software",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQFujUgRTZ2CHA/profile-displayphoto-scale_200_200/B4DZlYazF5JIAg-/0/1758125045377?e=1764806400&v=beta&t=VxXGM_rscGBO0J-kc_ldCbM0JYI9kwH3JsBb6VryJfA",
     panel: 3,
-    role: 'Panel Member'
+    role: 'Panel Member',
+    linkedin: "https://www.linkedin.com/in/mashgun/"
   }
 ];
 
