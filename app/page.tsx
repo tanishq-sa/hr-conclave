@@ -485,6 +485,15 @@ const panelists: Panelist[] = [
     image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
     panel: 4,
     role: 'Panel Member'
+  },
+  {
+    id: 22,
+    name: "Mahesh Gunjal",
+    title: "CHRO",
+    company: "Circulants Software",
+    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    panel: 3,
+    role: 'Panel Member'
   }
 ];
 
