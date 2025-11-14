@@ -544,14 +544,6 @@ const chiefGuests: ChiefGuest[] = [
     company: "dentsu",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQG9fpOxVcbCTw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1669463519137?e=1763596800&v=beta&t=7tEy6WXyQlVddMlRmeNb8KmkO0mzJ7ycAeogxzdoEFM",
     linkedin: "https://www.linkedin.com/in/unmeshpawar/"
-  },
-  {
-    id: 2,
-    name: "Dr. Radhakrishnan Pillai",
-    title: "Director",
-    company: "Chanakya International Institute of Leadership Studies, University of Mumbai",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQESZgdo6UjLgQ/profile-displayphoto-scale_400_400/B4DZd9tKBBGsAg-/0/1750160681231?e=1763596800&v=beta&t=ZAvWYCOi-7nfPwblhzuawPm7dlOccmHpb3PTp7yeHUA",
-    linkedin: "https://www.linkedin.com/in/rchanakyapillai"
   }
 ];
 
