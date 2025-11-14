@@ -349,16 +349,6 @@ const panelists: Panelist[] = [
     role: 'Moderator',
     linkedin: "https://www.linkedin.com/in/arunkumardas"
   },
-
-  {
-    id: 30,
-    name: "Bobby Kuriakose",
-    title: "Director - HR",
-    company: "Forbes Marshall",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
-    panel: 3,
-    role: 'Panel Member'
-  },
   // Panel 2 - Members
   {
     id: 8,
