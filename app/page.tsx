@@ -252,7 +252,7 @@ const roundTableSessions: (RoundTableSession & { note?: string })[] = [
     name: "Sujeet Patil",
     title: "People Partner",
     company: "Smollan",
-    image: "https://cdn.pixabay.com/photo/2023/02/18/11/00/icon-7797704_640.png",
+    image: "https://i.ibb.co/gZbzZ1Q4/Whats-App-Image-2025-11-15-at-19-32-39.jpg",
     roundTable: 2,
     role: 'Panel Member'
   },
