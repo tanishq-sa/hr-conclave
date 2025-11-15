@@ -488,7 +488,7 @@ const panelists: Panelist[] = [
     name: "Anand Dhruv",
     title: "Fractional Chief HR Officer",
     company: "RackBank Datacenter",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQGNV0uUrwTT1g/profile-displayphoto-shrink_200_200/B4DZdOfbgbGYAc-/0/1749368553330?e=1764806400&v=beta&t=6YtYBKe6m7gfHXr4SCk3hrH7-leH-BmNfP8pXL3DvsI",
+    image: "https://i.ibb.co/7dbKxQq6/image.png",
     panel: 4,
     role: 'Panel Member',
     linkedin: "https://www.linkedin.com/in/coachdhruvanand/"
